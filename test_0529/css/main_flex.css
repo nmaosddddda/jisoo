@@ -88,3 +88,39 @@ html, body {
     line-height: 1.2;
     letter-spacing: -0.05em;
 }
+.reqm h1 {
+    margin: 140px 0 60px 0;
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+.reqm ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.reqm ul li {
+    width: 511px;
+    height: 357px;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #ffffff;
+    padding: 250px 0 0 45px;
+    border-radius: 20px;
+    margin: 0 12px 24px 12px;
+}
+.reqm ul li:nth-child(1) {
+    background-image: url(../images/reqm1.png);
+}
+.reqm ul li:nth-child(2) {
+    background-image: url(../images/reqm\ 2.png);
+}
+.reqm ul li:nth-child(3) {
+    background-image: url(../images/reqm\ 3.png);
+}
+.reqm ul li:nth-child(4) {
+    background-image: url(../images/reqm\ 4.png);
+}
