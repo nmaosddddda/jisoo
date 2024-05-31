@@ -75,3 +75,82 @@ header .gnb ul li a:hover { /* 마우스를 오버했을때 */
     font-weight: 800;
     margin: -18px 0 0 0;
 }
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+    text-align: center;
+}
+.biz .list ul li a {
+    display: block;
+}
+.biz .list ul li a h3 {
+    font-size: 35px;
+    color: #1d1d1d;
+    margin: 20px 0 20px 0; /* 위 - 오른쪽 - 아래 - 왼쪽 */
+}
+.biz .list ul li a p {
+    margin: 0 20px 30px 20px;
+}
+.biz .list ul li a .more {
+    width: 230px;
+    height: 40px;
+    line-height: 40px;
+    /* 행간을 높이와 동일하게 주면 글자가 위아래 가운데 정렬이 됨 */
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+.brand {
+    background: url(../images/brand_bg.png) no-repeat center center / cover ;
+    color: #fff;
+    height: 730px;
+    margin: 125px 0 0 0;
+}
+.brand h2 {
+    color: #abc5f6;
+    padding: 130px 0 0 0;
+}
+.brand p {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+}
+.brand a {
+    border: 1px solid rgba(255,255,255,0.6);
+    padding: 10px 44px; /* 위아래 10px 좌우 44px */
+    display: inline-block;
+}
+
+footer {
+    background-color: #333;
+    color: rgba(255,255,255,0.8);
+    padding: 30px 0 90px 0;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 39px 0 0;
+}
+/* li.privacy (여백없음) li중에서 privacy라는 클래스명을 가진 li
+   li .privacy (여백있음) li안에 privacy라는 클래스명을 가진 요소 */
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+footer .f_sub {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 30px 0 0 0; /* 선 밖 여백 */
+    padding: 30px 0 0 0;/* 선 내부 여백 */
+}
+footer .f_sub .f_info span {
+    margin: 0 17px 20px 0;
+    display: inline-block;
+}
+footer .f_sub .copyright {
+    margin: 27px 0 0 0;
+    color: rgba(255,255,255,0.6);
+}
