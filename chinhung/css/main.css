@@ -22,6 +22,9 @@ html, body {
     letter-spacing: 0em; /* 자간 */
     word-break: keep-all; /* 단어별로 줄바꿈 */
 }
+#wrap { /* 홈페이지 전체를 감싸는 요소 */
+    min-width: 1260px;
+}
 .wrapper { /* 홈페이지 넓이를 제한하고 가운데 정렬 */
     width: 1260px;
     margin: 0 auto;
