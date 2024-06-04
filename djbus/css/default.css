@@ -19,3 +19,7 @@ a {
 img { /* img태그를 a태그로 감싸면 일부 브라우저에서 파란색 테두리가 생김 */
     border: 0;
 }
+
+em {
+    font-style: normal;
+}
