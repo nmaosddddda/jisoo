@@ -1,0 +1,93 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 
+모든 태그를 감싸는 html body에 선언*/
+html, body {
+    font-family: 'NanumSquareNeo', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0em; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자 크기의 1.3배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
+/* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+.community .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.community .colgroup1 .rowgroup1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 24px 0;
+}
+.community .colgroup2 .rowgroup2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 0 0;
+}
+.community .txt_news {
+    width: 297px;
+    height: 208px;
+    background-color: #f7f7f7;
+}
+.community .txt_news a {
+    height: 208px;
+}
+.community .txt_news.color1 {
+    background-color: #1ca94b;
+    color: #fff;
+}
+.community .txt_news.color2 {
+    background-color: #097cbf;
+    color: #fff;
+}
+.community .photo_news {
+    width: 618px;
+    height: 355px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+}
+.community .photo_news a {
+    height: 355px;
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    justify-content: flex-end; /* 하단 정렬 */
+}
+/* <div class="photo_news bg1">
+    하나의 요소에 두개의 이름이 들어간 경우 */
+.community .photo_news.bg1 {
+    background-image: url(../images/community1.png);
+}
+.community .photo_news.bg2 {
+    background-image: url(../images/community2.png);
+}
+.community a strong {
+
+}
+.community a {
+    padding: 28px 30px;
+    display: block;
+}
+.community a h2 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+.community a .name {
+    display: flex;
+}
+.community a .name span:first-child {
+    margin: 0 33px 0 0;
+}
