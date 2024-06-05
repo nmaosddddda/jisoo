@@ -134,11 +134,11 @@ header .gnb ul li a:hover {
 .promotion {
     /* 배경보다 promotion 콘텐츠 길이가 더 길다. 배경의 위치를 정확하게 - 가운데 상단 
     background-size 주면 안됨. 디자인한 사이즈대로 들어가야 하니까. */
-    background: url(../images/pm_bg.png) no-repeat center center
+    background: url(../images/pm_bg.png) no-repeat center top;
 }
 .promotion .news {
     color: #fff;
-    padding: 150px 0 120px 0;
+    padding: 130px 0 120px 0;
 }
 .promotion .news .wrapper {
     display: flex;
@@ -149,7 +149,7 @@ header .gnb ul li a:hover {
     font-weight: 800;
     color: #fff;
     line-height: 1.2;
-    padding: 13px 0 0 0;
+    padding: 24px 2px 0;
 }
 .promotion .news .tit h2 em {
     color: #369EAA;
@@ -167,25 +167,110 @@ header .gnb ul li a:hover {
     background-color: #fff;
     color: #133941;
 }
-.promotion .list {
+.promotion .news .list {
     width: 725px;
 }
-.promotion .list ul li {
+.promotion .news .list ul li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-.promotion .list ul li a {
+.promotion .news .list ul li a {
     /* display:flex는 해당 요소를 block요소로 만들어서 넓이를 100%로 만듬. */
     display: flex;
     justify-content: space-between;
     align-items: center; /* 위아래 가운데 */
     padding: 13px 15px 13px 15px;
 }
-.promotion .list ul li a strong {
+.promotion .news .list ul li a strong {
     font-size: 20px;
     color: #fff;
 }
 /* a태그에 오버했을때 strong태그는 */
-.promotion .list ul li a:hover strong {
+.promotion .news .list ul li a:hover strong {
     font-weight: 800;
     color: #369EAA;
+}
+.promotion .movie .tit h2 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    padding: 13px 0 0 0;
+    margin: 0 0 13px 0;
+}
+.promotion .movie .tit h2 em {
+    color: #369EAA;
+}
+.promotion .movie .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.promotion .movie .list ul li {
+    width: 404px;
+}
+.promotion .movie .list ul a {
+    display: block;
+    /* a는 인라인태그, 내부에는 block태그
+    a와 li의 영역 크기를 동일하게 주기 위해
+    a도 block요소로 만듬 */
+}
+.promotion .movie .list ul li a .photo img {
+    border: 1px solid #133941;;
+    /* 이미지에 테두리를 주면 이미지 밖으로 테두리 생성 
+    이미지는 감싸는 영역의 크기를 이미지보다 작게해도
+    이미지가 자동으로 줄어들지 않습니다. 본인의 사이즈대로 나타남.
+    글자는 줄바꿈을 함. */
+    width: calc(100% - 2px);
+    /* 나를 감싸는 photo의 넓이에 100% - 테두리는 별도 
+       넓이 100%에서 테두리값을 뺀 넓이를 주면 됨 */
+}
+.promotion .movie .list ul li a strong {
+    margin: 8px 0 0 0;
+    display: block; /* margin값 적용 */
+}
+.promotion .movie .list ul li a h3 {
+    font-size: 20px;
+    font-weight: 800;
+}
+/* 마우스를 오버 
+   스타일이 변경되는 요소의 스타일이 정의된 선택자를 그대로 복사해야함 
+   만약에 그냥 body라던가 다른 스타일을 상속받은거면 
+   그냥 a에게 스타일을 주면 됨 */
+.promotion .movie .list ul li a:hover strong {
+    color: #369EAA;
+}
+.promotion .movie .list ul li a:hover h3 {
+    color: #369EAA;
+}
+
+footer {
+    margin: 170px 0 0 0;
+    padding: 53px 0 100px 0;
+    background-color: #1A1B1C;
+    color: rgba(255,255,255,0.8);
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin: 0 35px 0 0;
+}
+footer .f_nav ul li.privacy {
+    font-weight: 800;
+}
+footer .f_info {
+    margin: 22px 0 22px;
+}
+/* footer .f_info address, span
+   이렇게 선택자를 쓰면 footer안에 f_info라는 클래스명을
+   갖은 요소 안에 있는 address와 html내부의 모든 span가
+   되어 버림 */
+footer .f_info address,
+footer .f_info span {
+    margin: 0 35px 7px 0;
+    display: inline-block; 
+    /* address는 블럭태그인데 span태그와 좌우에 배치되려고,
+       span은 margin을 적용시키려고 */
+}
+footer .copyright {
+    color: rgba(255, 255, 255, 0.6);
 }
