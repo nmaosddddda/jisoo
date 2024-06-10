@@ -70,7 +70,7 @@ header .gnb ul li a {
     font-size: 22px;
 }
 header .gnb ul li a:hover {
-    font-weight: 900;
+    color: #02646F;
 }
 .visual {
     border-radius: 0 0 200px 0;
@@ -162,6 +162,160 @@ header .gnb ul li a:hover {
 .culture .list ul li a:hover .photo img {
     transform: scale3d(1.2, 1.2, 1);
 }
+.culture .wrapper {
+    position: relative;
+    /* .culture .more a 정렬의 중심 */
+}
+.culture .more {
+    /* .culture .wrapper를 기준으로 정렬 */
+    position: absolute;
+    right: 0;
+    top: 50px;
+}
+.culture .more a {
+    display: block;
+    color: #666;
+    padding: 3px 27px 5px 10px;
+    border: 1px solid #ccc;
+    background: url(../images/more.svg) no-repeat right 9px center;
+    /* 오른쪽에서 9px 떨어져 있고, 위아래 가운데 */
+    transition: 0.1s;
+    /* 나중에 a에 class가 추가되거나 또는 오버를 해서 스타일이 변경된다면
+    0.1초의 시간동안 천천히 변하기 */
+}
+.culture .more a:hover {
+    /* border:1px soild #9f9f9f; 이렇게 선언된 상태에서
+    오버했을때 색상만 변한다면 반드시 background-color라고 정확하게
+    해당 속성명을 써줘야함. background라고 하고 색상만 선언하면 모든게 취소됨 */
+    border-color: #02646F;
+    background-color: #02646F;
+    background-image: url(../images/more_w.svg);
+    color: #fff;
+}
+
+.tour .tit {
+    margin: 150px 0 36px 0;
+}
+.tour .tit span {
+    color:#02646F;
+}
+.tour .tit h2 {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 165px 0 4px 0;
+}
+.tour .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tour .list ul li {
+    width: 190px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgba(255, 255, 255, 0.8);        
+}
+/* li중에서 active 클래스를 갖고 있는 li */
+.tour .list ul li.active {
+    width: 618px;
+} 
+.tour .list ul li.tour1 {
+    background-image: url(../images/tour1.png);
+}
+.tour .list ul li.tour2 {
+    background-image: url(../images/tour2.png);
+}
+.tour .list ul li.tour3 {
+    background-image: url(../images/tour3.png);
+}
+.tour .list ul li.tour4 {
+    background-image: url(../images/tour4.png);
+}
+.tour .list ul li a {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 5px 42px 5px;
+    text-align: center;
+}
+.tour .list ul li.active a {
+    padding: 0 28px 30px 28px;
+    text-align: left;
+}
+.tour .list ul li a p {
+    display: none; /* 숨김 (공간차지 x) */   
+}
+.tour .list ul li.active a p {
+    display: block; 
+    /* 나타남; display:none;으로 숨기는 경우
+    display:lnline; inline-block; block; flex; 줘도 모두 나타남 */
+}
+.tour .list ul li a h3 {
+    font-weight: 900;
+    font-size: 20px;
+    color: #fff;
+}
+.tour .wrapper {
+    position: relative; /* .tour .more 정렬의 기준 */
+}
+.tour .more {
+    position: absolute; /* .tour .wrapper를 기준으로 정렬 */
+    right: 0;
+    top: 50px;
+}
+.tour .more a {
+    padding: 3px 27px 5px 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    background: url(../images/more.svg) no-repeat right 9px center;
+}
+.tour .more a:hover {
+    border-color: #02646F;
+    background-color: #02646F;
+    background-image: url(../images/more_w.svg);
+    color: #fff;
+}
+
+.community {
+    height: 900px;
+    background: url(../images/community_bg.png) no-repeat center center /cover;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 164px 0 0 0;
+}
+.community .wrapper {
+    display: flex;
+}
+.community .tit {
+    width: 334px;
+    margin: 170px 0 0 0;
+}
+.community .tit h2 {
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 0 20px 0;
+}
+.community .news {
+    background-color: rgba(0, 46, 87, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    /* margin을 적용해주기 위한 값 */
+    width: 618px;
+    height: 380px;
+    margin: 124px 0 0 0;
+    padding: 0 38px; /* 내부여백 */
+}
+.community .news h3 {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    margin: 38px 0 17px 0;
+}
+
 
 footer {
     margin-top: 500PX;
