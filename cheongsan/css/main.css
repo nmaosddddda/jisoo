@@ -297,14 +297,14 @@ header .gnb ul li a:hover {
     font-size: 45px;
     font-weight: 900;
     line-height: 1.2;
-    margin: 0 0 20px 0;
+    margin: 0 0 8px 0;
 }
 .community .news {
     background-color: rgba(0, 46, 87, 0.5);
     border-radius: 20px;
     backdrop-filter: blur(3px);
     /* margin을 적용해주기 위한 값 */
-    width: 618px;
+    width: 610px;
     height: 380px;
     margin: 124px 0 0 0;
     padding: 0 38px; /* 내부여백 */
@@ -315,8 +315,92 @@ header .gnb ul li a:hover {
     color: #fff;
     margin: 38px 0 17px 0;
 }
-
+.community .news ul li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.community .news ul li:first-child {
+    border-top: 0;
+}
+.community .news ul li a {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 13px;
+}
+.community .news ul li a strong {
+    color: #fff;
+    font-size: 15px;
+}
+.community .news ul li a:hover strong {
+    color: #94CCFF;
+} 
+.community .link {
+    width: 298px; /* li한개의 넓이x2 + gap */
+    margin: 230px 0 0 22px;
+}
+.community .link ul {
+    display: flex;
+    flex-wrap: wrap; /* 두줄 허용 */
+    gap: 22px; /* li 사이의 여백 */
+}
+.community .link ul li {
+    width: 136px;
+}
+.community .link ul li a {
+    display: block;
+    height: 125px;
+    padding: 17px;
+    background-color: rgba(0, 46, 87, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    color: #fff;
+    font-weight: 900;
+    background-position: right 19px bottom 19px;
+    background-repeat: no-repeat;
+}
+.community .link ul li.link1 a {
+    background-image: url(../images/community_ico1.svg);
+}
+.community .link ul li.link2 a {
+    background-image: url(../images/community_ico2.svg);
+}
+.community .link ul li.link3 a {
+    background-image: url(../images/community_ico3.svg);
+}
+.community .link ul li.link4 a {
+    background-image: url(../images/community_ico4.svg);
+}
+.community .link ul li a:hover {
+    background-color: rgba(148, 204, 255, 0.5);
+}
 
 footer {
-    margin-top: 500PX;
+    padding: 41px 0 115px 0;
 }
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .f_nav ul {
+    display: flex;
+}
+footer .f_nav ul li {
+    margin-right: 45px;
+}
+footer .f_info {
+    margin: 43px 0 24px 0;
+    display: flex;
+    gap: 45px; /* li 사이 여백 */
+}
+footer .copyright {
+    color: #666;
+}
+footer .family button {
+    width: 185px;
+    height: 40px;
+    border: 1px solid #707070;
+    padding: 0 20px;
+    text-align: left; /* 버튼의 기본은 가운데 */
+    background: url(../images/more_f.svg) no-repeat right 15px center;  
+}
+
+

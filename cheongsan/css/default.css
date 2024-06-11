@@ -24,3 +24,14 @@ img { /* img태그를 a태그로 감싸면 일부 브라우저에서 파란색 �
 em, address {
     font-style: normal;
 }
+
+button {
+    background-color: transparent;
+    border: 0;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size:inherit ;
+    color: inherit ;
+    letter-spacing: inherit;
+    cursor: pointer; /* 버튼에 오버 시 마우스포인터를 손바닥으로 변경*/
+}
