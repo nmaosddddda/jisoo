@@ -182,4 +182,7 @@ html, body {
     .tech p {
         width: auto; /* 넓이 해제 */
     }
+    .tech .photo img {
+        width: 100%;
+    }
 }/* media */
