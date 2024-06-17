@@ -2,25 +2,25 @@
 @import url(fonts.css);
 @import url(common.css);
 
-/* 폰트 2개 - 제목에는 gmarket / 본문 pretendard
-   body에는 본문 서체 적용 
-   제목 서체를 적용하는 방법
-   1. css에서 해당 요소를 모두 선택해서 .biz h2 이렇게 각각 불러서 
-   gmarket 서체 적용 (font-family:gmarket을 계속 선언)
-   2. css를 하나 만들어둠
-   예를 들어 .tit 이라고 ...
-   html에서 gmarket 서체를 써야하는 html요소에
-   <section class="biz">
-        <h2 class="tit"> <!-- 필요한 곳에 class명을 주는 방식)
-   </section>
+/* 폰트2개... 제목에는 gmarket / 본문 pretendard 
+    body에는 본문 서체 적용. 
+    제목 서체를 적용하는 방법 
+    1. css에서 해당 요소를 모두 선택해서 .biz h2 이렇게 각각 불러서
+       gmarket 서체 적용 (font-family:gmarket을 계속 선언)
+    2. css를 하나를 만들어둠 
+       예를들어 .tit 이라고 ... 
+       html에서 gmarket 서체를 써야하는 html요소에 
+       <section class="biz">
+            <h2 class="tit"></h2> <!-- 필요한 곳에 class명을 주는 방식)
+       </section>
 */
 .tit {
-    font-family: 'GmarketSans', sans-serif ; /* sans-serif 고딕*/
+    font-family: 'GmarketSans', sans-serif; /* sans-serif 고딕 */
     font-weight: 500;
     line-height: 1.2;
 }
 .tit_b {
-    font-family: 'GmarketSans', sans-serif ; /* sans-serif 고딕*/
+    font-family: 'GmarketSans', sans-serif; /* sans-serif 고딕 */
     font-weight: 700;
     line-height: 1.2;
 }
@@ -31,11 +31,11 @@ header {
     top: 0;
     z-index: 100;
     /* position을 가지고 있는 요소들 중에서
-       제일 높은 숫자를 줘서 위에 배치
-       잘못하면 메뉴 안눌림*/
+       제일 높은 숫자를 줘서 위에 배치 
+       잘못하면 메뉴 안눌림 */
     width: 100%;
     height: 100px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
     color: #fff;
 }
 header .wrapper {
@@ -54,41 +54,55 @@ header .gnb .gnb_wrap ul {
 }
 header .gnb .gnb_wrap ul li a {
     padding: 37px 47px 36px 47px;
-    display: block;
+    display: block; /* padding때문에 */
     font-size: 22px;
+    position: relative; /* after 정렬의 기준 */
 }
-
-@media screen and (max-width:640px){ 
-    header {
-        height: 50px;
-    }
-    header .logo {
-        margin: 11px 0 0 0;
-    }
-    header .logo img {
-        width: 70px; 
-        /* 이미지태그로 코딩한 요소는 사이즈가 변경되면
-           반드시 css에서 img태그를 불러서 스타일을 줘야함
-           감싸는 요소에 줘도 적용안됨 
-           이미지는 넓이만 주면 높이는 알아서 조정됨*/
-    }
-    header .gnb .gnb_open {
-        /* 모바일에서 나타남 
-           - 이미 header에 position값이 존재함 - header를 기준으로 정렬 */
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0; 
-        width: 60px;
-        height: 50px;
-        /* botton의 사이즈를 크게 줘서 잘 눌리게 하려고 */
-        font-size: 0;
-        line-height: 0; /* 글자 숨기기 */
-        background: url(../images/gnb_open.svg) no-repeat center center;
-    }
-    header .gnb .gnb_wrap {
-        display: none; /* 메뉴는  열기 버튼을 클릭했을때만 나옴 */
-    }
+header .gnb .gnb_wrap ul li a::after {
+    position: absolute; /* a를 기준으로 배치 */
+    right: 0;
+    top: 47px;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    content: ""; /* after를 보이게 하는값 */
+}
+/* 마지막 li의 a의 after 선택자를 숨김 */
+header .gnb .gnb_wrap ul li:last-child a::after {
+    display: none;
+}
+@media screen and (max-width:640px){
+                header {
+                    height: 50px;
+                }
+                header .logo {
+                    margin: 11px 0 0 0;
+                }
+                header .logo img {
+                    width: 70px; 
+                    /* 이미지태그로 코딩한 요소는 사이즈가 변경되면
+                    반드시 css에서 img태그를 불러서 스타일을 줘야함
+                    감싸는 요소에 줘도 적용안됨... 
+                    이미지는 넓이면 높이는 알아서 조정됨 */
+                }
+                header .gnb .gnb_open {
+                    /* 모바일에서 나타남
+                     - 이미 header에 position값이 존재함 - header를 기준으로 정렬 */
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 60px;
+                    height: 50px;
+                    /* button의 사이즈를 크게 줘서 잘 눌리게 하려고 */
+                    font-size: 0;
+                    line-height: 0; /* 글자 숨기기 */
+                    background: url(../images/gnb_open.svg) no-repeat center center;
+                }
+                header .gnb .gnb_wrap {
+                    display: none; /* 메뉴는 열기 버튼을 클릭했을때만 나옴 */
+                }
 }/*media*/
 
 .visual {
@@ -97,41 +111,54 @@ header .gnb .gnb_wrap ul li a {
     height: 800px;
 }
 .visual strong {
-    padding: 575px 0 0 0;
-    display:block; /* padding 여백을 주기 위한값 */
+    display: block; /* padding여백을 주기 위한값 */
+    padding: 575px 0 9px 0;
     font-size: 20px;
 }
 .visual h2 {
     font-size: 45px;
 }
+@media screen and (max-width:640px){
+                .visual {
+                    height: auto; /* 높이는 콘텐츠의 길에 맞춰 알아서 */
+                    padding: 152px 0 46px 0;
+                }
+                .visual strong {
+                    display: none; /* 숨김 */
+                }
+                .visual h2 {
+                    font-size: 15px;
+                }
+                .visual h2 em {
+                    font-size: 20px;
+                }
+}/* media */
 
-@media screen and (max-width:640px){ 
-    .visual {
-        height: auto; /* 높이는 콘첸츠의 길에 맞춰 알아서 */
-        padding: 200px 0 55px 0;
-    }
-    .visual strong {
-        display: none; /* 숨김 */
-    }
-    .visual h2 {
-        font-size: 15px;
-    }   
-    .visual h2 em {
-        font-size: 20px;
-    }
-    .visual h2 em span {
-        display: block; 
-    }
-}/*media*/
-
+.biz {
+    margin: 96px 0 0 0;
+}
 .biz .wrapper {
     display: flex;
     justify-content: space-between;
+   /* flex로 정렬하면 좌우요소의 길이가 같아짐. 
+      하지만 구현을 위해서 존재가하는 만큼만 길이가 잡혀야함 
+      align-items을 주면 flex로 정렬된 요소들의 
+      길이가 같아지는 현상이 사라짐. */
     align-items: flex-start;
 }
 .biz .subject {
     position: sticky;
     top: 20px;
+    /* 나를 감싸는 요소의 길이 내부에서 스크롤되는 동안 
+      상단에 고정으로 존재하는 것. 
+      감싸는 요소가 모두 스크롤되면 따라서 스크롤됨 
+      대부분 left를 잘 안주고 top만 줌 
+      고정될때 상단의 여백이 됨.. 
+      단점 : 감싸는 요소중에서 절대 속성으로 
+      overflow:hidden;을 주면 안됨..
+      -- wrap한데 무조건 overflow:hidden; 줘야함. 
+      -- 그래서 플러그인으로 대체해서 잘 사용함. */
+    margin: 48px 0 0 0;
 }
 .biz .subject strong {
     color: #1456AC;
@@ -142,11 +169,173 @@ header .gnb .gnb_wrap ul li a {
     margin: 8px 0;
 }
 .biz .list {
-    width: 500px;
-    height: 1500px;
-    background-color: aquamarine;
+    width: 832px;
 }
-
+.biz .list ul {
+    display: flex;
+    flex-wrap: wrap; /* 2줄 허용 */
+    gap: 24px;
+}
+.biz .list ul li {
+    width: 404px;
+    color: #fff;
+    border-radius: 20px;
+    overflow: hidden; /* 넘치는 요소 삭제 */
+}
+.biz .list ul li:nth-child(odd) { /* 홀수 odd/짝수 even */
+    transform: translate(0, 80px);
+    /* transform은 현재의 위치에서부터 요소를 움직이는데
+      살짝 absolute처럼 다른요소와 부딪치더라도 배치할 수 있음
+      margin은 다른 요소와 중복되면 밀리는 현상이 발생하는데
+      transform:translate로 움직이는 것은 공간을 차지하지 않음
+      기본적으로 모든 여백은 margin이고 margin으로 안되는 경우 
+      transform:translate를 사용 */
+}
+.biz .list ul li a {
+    height: 300px;
+    display: block; /* height를 적용하기 위한 값 */
+    position: relative; /* h3 정렬의 기준 */
+    text-align: center;
+}
+.biz .list ul li a .photo::before {
+    display: none;
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 86, 172, 0.85);
+    content: ""; /* before를 존재하게하는 값 */
+}
+.biz .list ul li a:hover .photo::before { /* a에 오버했을때 */
+    display: block;
+}
+.biz .list ul li a h3 {
+    position: absolute; /* a를 기준으로 정렬 */
+    left: 0;
+    bottom: 48px;
+    
+    width: 100%; /* 기준 a와 넓이가 같아짐 */
+    font-size: 25px;
+}
+.biz .list ul li a:hover h3 {/* 오버시에 */
+    bottom: 120px; 
+}
+.biz .list ul li a p {
+    /* 마우스 오버 시에만 보임 
+       - 미리 오버 스타일 모두 가지고 있고, display로 
+         보이는 상태만 조절하는 것이 좋음 */
+    display: none;
+    position: absolute; /* a를 기준으로 */
+    left: 0;
+    bottom: 75px;
+    margin: 0 34px;
+    color: rgba(255,255,255,0.8);
+}
+.biz .list ul li a:hover p { /* 오버한경우 */
+    display: block;
+}
+.biz .list ul li a .more {
+    display: none;
+    position: absolute; /* a를 기준으로 */
+    left: 50%;
+    transform: translate(-50%, 0);
+    /* 가운데 정렬 */
+    bottom: 39px;
+    color: rgba(255,255,255,0.8);
+    padding-right: 19px; /* 오른쪽에 아이콘 들어갈 여백 */
+}
+.biz .list ul li a:hover .more { /* 오버시에 */
+    display: block;
+}
+.biz .list ul li a .more::after {
+    position: absolute; /* more를 기준으로 정렬 */
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/biz_more.svg) no-repeat center center / contain;
+    content: ""; /* after를 보이게 하는값 */
+}
+@media screen and (max-width:640px){
+                .biz {
+                    margin: 41px 0 0 0;
+                }
+                .biz .wrapper {
+                    display: block;
+                }
+                .biz .subject {
+                    position: relative; 
+                    /* sticky를 해제하기 위해서 
+                    position중에서 줘도 변화가 없는 값으로 대체 */
+                    top: auto; /* relative도 top이 적용됨. 해제 auto */
+                    margin: 0 0 13px 0;
+                }
+                .biz .subject h2 {
+                    font-size: 25px;
+                    margin: 0;
+                }
+                .biz .subject p {
+                    display: none; /* 모바일 숨김 */
+                }
+                .biz .list {
+                    width: auto; /* 넓이 고정값 해제 */
+                }
+                .biz .list ul {
+                    gap: 0;
+                }
+                .biz .list ul li {
+                    /* width: calc(50% - 8px); */
+                    width: 50%;
+                    color: #3D3D3D;
+                    border-radius: 0;
+                    overflow: visible; 
+                    /* overflow 해제 - 길이만큼 늘어나게
+                       모바일에서 사이즈가 줄어들면 제목이 2줄이 될 수도 있음 */
+                }
+                .biz .list ul li:nth-child(odd) { 
+                    transform: translate(0, 0);
+                }
+                .biz .list ul li a {
+                    height: auto; /* 제목이 여러줄이 될 수도 있음 */
+                    text-align: left;
+                }
+                .biz .list ul li a:hover .photo::before { 
+                    display: none;
+                    /* 모바일 마우스 오버가 없음 
+                       단, 꾹 누르고 있으면 오버가 구현됨..
+                       오버 스타일을 삭제하거나 제대로 구현되도록 해야함 */
+                }
+                .biz .list ul li a .photo {
+                    height: 82px;
+                    overflow: hidden;
+                }
+                .biz .list ul li a .photo img {
+                    /* pc와 mobile에서 이미지의 비율이 다르게 보일때 
+                       img태그로 코딩한 이미지를 정해진 영역에 맞게 
+                       사이즈를 리사이즈해주는 코딩 */
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .biz .list ul li a h3 {
+                    position: relative; /* absolute 해제 */
+                    left: auto;
+                    bottom: auto;
+                    font-size: 13px;
+                    font-weight: 500;
+                    margin: 5px 0 23px 0;
+                }
+                .biz .list ul li a:hover h3 {/* 오버시에 */
+                    bottom: auto;
+                }
+                .biz .list ul li a:hover p { /* 오버한경우 */
+                    display: none;
+                }
+                .biz .list ul li a:hover .more { /* 오버시에 */
+                    display: none;
+                }
+}/* media */
 
 footer {
     margin-top: 2000px;
