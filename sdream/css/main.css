@@ -666,6 +666,188 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     }
 }/*media*/
 
-footer {
-    margin-top: 2000px;
+.introduce {
+    display: flex;
+    margin: 160px 0 0 0;
 }
+.introduce .intro_left {
+    width: 50%;
+    background: url(../images/intro1.png) no-repeat center center / cover;
+    display: flex;
+    justify-content: flex-end
+}
+.introduce .intro_right {
+    width: 50%;
+    background: url(../images/intro2.png) no-repeat center center / cover;
+}
+.introduce a {
+    height: 263px;
+    width: 630px;
+    display: block; /* height를 주기 위한 값 */
+    color: #fff;
+    margin: 100px 0 0 0;
+}
+.introduce h3 {
+    font-size: 35px;
+    font-weight: 700;
+}
+.introduce p {
+    margin: 15px 0 8px 0;
+}
+.introduce .intro_right a {
+    padding: 0 0 0 80px;
+}
+.introduce a .more {
+    display: inline-block;
+    padding-right: 25px;
+    position: relative;
+    margin: 10px 0 0 0;
+    color: rgba(255,255,255,0.8);
+}
+.introduce a .more::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background: url(../images/intro_icon.svg) no-repeat center center/ contain;
+    content: "";
+}
+
+@media screen and (max-width:640px){
+        .introduce {
+            margin: 64px 0 0 0;
+        }
+        .introduce a {
+            height: auto;
+            width: auto;
+            margin: 37px 0 42px 0;
+            text-align: center;
+        }
+        .introduce .intro_left {
+            display: block;
+        }
+        .introduce h3 {
+            font-size: 20px;
+            margin: 0 0 2px 0;
+        }
+        .introduce p {
+            display: none;
+        }
+        .introduce .intro_right a {
+            padding: 0;
+        }
+        .introduce a .more {
+            padding-right: 25px;
+            margin: 0;
+        }
+        .introduce a .more::after {
+            top: -1px;
+        }
+}/*media*/
+
+footer {
+    background-color: #2D2D2D;
+    padding: 52px 0 60px 0;
+    color: rgba(255,255,255,0.8);
+}
+footer .wrapper {
+    position: relative; /* top 정렬의 기준 */
+}
+footer .top {
+    position: absolute; /* wrapper를 기준으로 정렬  */
+    right: 0;
+    top: 0;
+}
+footer .top button {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.6);
+    border-radius: 50%; /* 동그라미 */  
+    padding: 14px 0 0 0;
+    position: relative; /* before 정렬의 기준 */
+}
+footer .top button::before {
+    position: absolute;
+    left: 12px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    background: url(../images/top_icon.svg) no-repeat center center / contain;
+    content: ""; /* before를 보이게 하는 값 */
+}
+footer .f_nav ul {
+    display: flex;
+    gap: 35px;
+}
+footer .f_nav ul li {
+    position: relative; /* after 정렬의 기준 */
+}
+footer .f_nav ul li::after {
+    position: absolute;/* li를 기준으로 정렬 */
+    right: -19px;
+    top: 3px;
+    width: 1px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.2);
+    content: "";
+}
+footer .f_nav ul li:last-child::after {
+    display: none;
+}
+footer .f_info {
+    margin: 32px 0 0 0; 
+    display: flex;
+    gap: 30px;  
+}
+footer .copyright {
+    margin: 6px 0 0 0;
+    color: rgba(255,255,255,0.6);
+}
+
+@media screen and (max-width:640px){
+    footer {
+        padding: 14px 0 77px 0;
+    }
+    footer .top {
+        position: relative; /* absolute 해제  */
+        right: auto;
+        top: auto;
+        text-align: right;
+        margin: 0 0 32px 0;
+    }
+    footer .top button {
+        width: 40px;
+        height: 40px;
+        padding: 13px 0 0 0;
+    }
+    footer .top button::before {
+        left: 10px;
+        top: 2px;
+        width: 19px;
+        height: 19px;
+    }
+    footer .f_nav ul {
+        flex-wrap: wrap; /* 여러줄 허용 */
+        gap: 0;
+    }
+    footer .f_nav ul li {
+        margin: 0 30px 5px 0;
+    }
+    footer .f_nav ul li::after {
+        right: -16px;
+    }
+    footer .f_info {
+        margin: 26px 0 0 0; 
+        flex-wrap: wrap;
+        gap: 0;  
+    }
+    footer .f_info address,
+    footer .f_info span {
+        margin: 0 30px 5px 0;
+    }
+    footer .copyright {
+        margin: 4px 0 0 0;
+        color: rgba(255,255,255,0.6);
+    }
+}/*media*/
