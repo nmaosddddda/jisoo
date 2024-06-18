@@ -490,7 +490,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     }
     .news .more a::after {
         right: 4px;
-        top: 4px;
+        top: 5px;
         width: 14px;
         height: 14px;
         background-image: url(../images/more_s.svg);
@@ -658,8 +658,8 @@ header .gnb .gnb_wrap ul li:last-child a::after {
         line-height: 0;
     }
     .webzine .more a::after {
-        right: 5px;
-        top: 6px;
+        right: 3px;
+        top: 4px;
         width: 16px;
         height: 16px;
         background-image: url(../images/more_s.svg);
