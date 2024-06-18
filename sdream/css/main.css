@@ -398,7 +398,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 .news .more {
     position: absolute; 
     right: 0;
-    top: 33px;
+    top: 30px;
 }
 .news .more a {
     display: block;
@@ -497,9 +497,6 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     }   
 }/*media*/
 
-.webzine {
-
-}
 .webzine .subject strong {
     color: #1456AC;
     margin: 105px 0 0 0;
@@ -540,8 +537,134 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     height: 100%;
     object-fit: cover; 
     /* 감싸는 요소에 꽉 맞춰서 리사이즈 - 위아래/좌우에 가운데 이미지 정렬 */
+    transition: 0.5s; 
+    /* 앞으로 img에 어떤 변화가 있으면 그걸 부드럽게 처리
+       1.마우스오버
+       2.클래스추가
+       3.브라우저 사이즈가 바뀌어서 반응형 코드 적용
+       */
 }
-
+.webzine .list ul li a strong {
+    color: #1456AC;
+    display: block;
+    margin: 28px 23px 8px 23px;
+}
+.webzine .list ul li a h3 {
+    font-size: 20px;
+    margin: 0 23px 0 23px;
+}
+/* 마우스를 올렸을때 */
+.webzine .list ul li a:hover .photo img {
+    transform: scale3d(1.2, 1.2, 1); /* 이미지확대 */
+}
+.webzine .list ul li a:hover {
+    border-color: #1456AC;
+    background-color: #1456AC;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.webzine .list ul li a:hover strong {
+    color: #fff;
+}
+.webzine .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.webzine .more {
+    position: absolute; /* wrapper를 기준으로 정렬 */
+    right: 0;
+    top: 30px;
+}
+.webzine .more a {
+    padding: 8px 48px 6px 14px;
+    border: 1px solid #666;
+    border-radius: 17px; /* 높이의 절반 */
+    color: #666;
+    display: block; /* paddding, block 적용을 위한 값 */
+    position: relative; /* after 정렬의 기준 */
+}
+.webzine .more a::after {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 8px;
+    top: 7px;
+    width: 18px;
+    height: 18px;
+    background: url(../images/news_more_m.svg) no-repeat center center / contain;
+    content: ""; /* after를 보이게 하는 값 */
+}
+.webzine .more a:hover {
+    border-color: #1456AC;
+    background-color: #1456AC;
+    color: #fff;
+}
+.webzine .more a:hover::after {
+    background-image: url(../images/news_more_s.svg);
+}
+@media screen and (max-width:640px){
+    .webzine .subject {
+        margin: 35px;
+    }
+    .webzine .subject strong {
+        margin: 63px 0 0 0;
+    } 
+    .webzine .subject h2 {
+        font-size: 25px;
+        margin: 0 0 19px 0;
+    }
+    .webzine .list ul li {
+        width: calc(50% - 8px);
+    }
+    .webzine .list ul li:nth-child(3) {
+        display: none;
+        /* 해당 태그가 존재하지 않았던 것처럼 사라짐
+           공간 차지 x */
+    }
+    .webzine .list ul li a {
+        height: auto;
+        border-radius: 0;
+        border: 0;
+    }
+    .webzine .list ul li a .photo {
+        height: 86px;
+    }
+    .webzine .list ul li a strong {
+        display: none;
+        /* 한줄 제한 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .webzine .list ul li a h3 {
+        font-size: 13px;
+        margin: 12px 0 0 0;
+        /* 두줄 제한 */
+        line-height: 1.3; /* 행간 x 줄수 (단위는 em) */
+        height: 2.6em;
+        overflow: hidden;
+    }
+    .webzine .list ul li a:hover {
+        background-color: transparent; /* 투명 */
+        color: #3d3d3d;
+        box-shadow: none; /* 취소 */
+    }
+    .webzine .more {
+        top: 9px;
+    }
+    .webzine .more a {
+        padding: 0;
+        width: 29px;
+        height: 29px;
+        border-radius: 50%; /* 높이의 절반 */
+        font-size: 0; /* 글자삭제 */
+        line-height: 0;
+    }
+    .webzine .more a::after {
+        right: 5px;
+        top: 6px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../images/more_s.svg);
+    }
+}/*media*/
 
 footer {
     margin-top: 2000px;
