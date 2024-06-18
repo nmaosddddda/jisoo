@@ -1,0 +1,92 @@
+@import url(default.css);
+@import url(fonts.css);
+
+/* 글자의 스타일은 상속받음. 기본글자의 스타일은 
+모든 태그를 감싸는 html body에 선언*/
+html, body {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: -0.05em; /* 자간 */
+    line-height: 1.4; /* 배수 - 글자 크기의 1.3배 */
+    color: #3d3d3d; /* 글자 색상 */
+    word-break: keep-all; /* 단어별로 줄바꿈 */
+}
+/* 홈페이지 전체를 감싸는 요소 - 가로 스크롤바가 생겼을때 배경이 짤리는 현상을 막음 */
+#wrap {
+    min-width: 1260px;
+}
+/* 홈페이지의 넓이를 제한하고 가운데 정렬 */
+.wrapper {
+    width: 1260px;
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+.biz .tit {
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+    margin: 95px 0 35px 0;
+}
+.biz .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.biz .list ul li {
+    width: 297px;
+}
+.biz .list h3 {
+    color: #1d1d1d;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.tech {
+    background-color: #F4F4F4;
+    height: 762px;
+    margin: 87px 0 100px 0;
+}
+.tech .tit {    
+    color: #1d1d1d;
+    font-size: 45px;
+    font-weight: 800;
+    text-align: center;
+    padding: 95px 0 35px 0;
+}
+.tech .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.tech .list ul li {
+    width: 618px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;       
+}
+.tech .list ul li.tech1 {
+    background-image: url(../images/tech01.png);
+}
+.tech .list ul li.tech2 {
+    background-image: url(../images/tech02.png);
+}
+.tech .list ul li a {
+    height: 514px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+}
+.tech .list ul li h3 {
+    font-size: 35px;
+    font-weight: 800;
+    margin: 0 0 16px 0;
+}
+.tech .list ul li p {
+    margin: 0 0 210px 0;
+}
+.tech .list ul li p span {
+    display: block;
+}
