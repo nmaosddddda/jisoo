@@ -601,7 +601,7 @@ header .gnb .gnb_wrap ul li:last-child a::after {
 }
 @media screen and (max-width:640px){
     .webzine .subject {
-        margin: 35px;
+        margin: 35px 0 0 0;
     }
     .webzine .subject strong {
         margin: 63px 0 0 0;
