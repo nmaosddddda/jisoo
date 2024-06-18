@@ -651,8 +651,8 @@ header .gnb .gnb_wrap ul li:last-child a::after {
     }
     .webzine .more a {
         padding: 0;
-        width: 29px;
-        height: 29px;
+        width: 25px;
+        height: 25px;
         border-radius: 50%; /* 높이의 절반 */
         font-size: 0; /* 글자삭제 */
         line-height: 0;
