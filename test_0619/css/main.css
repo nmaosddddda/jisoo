@@ -234,3 +234,102 @@
 }
 .popup .swiper { height:350px } /* 팝업의 높이가 됨 */
 .popup .swiper-slide img { display:block; width:100%; height:100%; object-fit:cover; } 
+
+.visual {
+    margin: 100PX 0;
+    position: relative; /* 팝업을 감싸는 요소는 position: relative */
+}
+.visual ul li {
+    height: 850px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+.visual ul li.bg1 {
+    background-image: url(../images/visual_bg1.png);
+}
+.visual ul li.bg2 {
+    background-image: url(../images/visual_bg2.png);
+}
+.visual ul li.bg3 {
+    background-image: url(../images/visual_bg3.png);
+}
+.visual ul li h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 357px 0 0 0;
+}
+.visual .btn_prev,
+.visual .btn_next {
+    position: absolute; /* swiper를 기준으로 정렬 */
+    top: 348px;
+    z-index: 10;
+    /* swiper안에는 position값이 많이 적용됨 
+       position끼리는 서로 겹침
+       그래서 더 위에 배치하려면 z-index 위아래값 (층수)
+       숫자가 더 높은게 더 위에 배치 */
+}
+.visual .btn_prev {
+    left: 2%;
+}
+.visual .btn_next {     
+    right: 2%;
+} 
+.visual .btn_prev i,
+.visual .btn_next i {
+    font-size: 130px; /* 아이콘크기 */
+    color: rgba(255, 255, 255, 0.5); /* 아이콘 색상 */
+    font-weight: 100;
+}
+.visual .btn_wrap {
+    /* swiper를 기준으로 정렬 */
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    z-index: 10;
+    width: 100%; /* 기준이 되는 swiper와 넓이가 같아짐 */
+    display: flex; /* 안에 있는 요소 좌우 나란히 */
+    justify-content: center;
+    /* 해당 요소의 넓이에서 가운데 */
+    align-items: center; /* 좌우로 배치된 요소끼리 위아래 가운데 정렬 */
+}
+.visual .btn_wrap .paging {
+    width: auto; 
+    /* swiper에서 paging에 넓이 100%를 줌 */
+}
+/* 기본 스타일 */
+.visual .btn_wrap .paging .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    background: none;
+    opacity: 1;
+    border: 1px solid #fff;
+}
+/* 현재 선택된 동그라미 */
+.visual .btn_wrap .paging .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+}
+.visual .btn_wrap button i {    
+    color: #fff; /* 아이콘 색상 */
+    font-size: 24px; /* 아이콘 크기 */
+    font-weight: 100; /* 아이콘 두께 */
+}
+
+.book {
+    margin: 100px 0;
+}
+.book ul li {
+    width: 297px;
+}
+.book ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.book ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
