@@ -315,6 +315,34 @@
     font-size: 24px; /* 아이콘 크기 */
     font-weight: 100; /* 아이콘 두께 */
 }
+@media screen and (max-width:640px){
+    .visual ul li {
+        height: 435px;
+    }
+    .visual ul li h2 {
+        font-size: 25px;
+        font-weight: 700;
+        margin: 175px 0 0 0;
+    }
+    .visual ul li p {
+        font-size: 13px;
+    }
+    .visual .btn_prev,
+    .visual .btn_next {
+        display: none;
+    }
+    .visual .btn_wrap {
+        bottom: 25px;
+    }
+    /* 기본 스타일 */
+    .visual .btn_wrap .paging .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+    .visual .btn_wrap button i {    
+        font-size: 18px; /* 아이콘 크기 */
+    } 
+} /*media*/
 
 .book {
     margin: 100px 0;
@@ -333,3 +361,23 @@
     object-fit: cover;
 }
 
+
+@media screen and (max-width:640px){
+    .book ul li {
+        width: 200px;
+    }
+}/*media*/
+
+.sns {
+    margin: 100px 0;
+}
+.sns ul li a .photo {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+}
+.sns ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
