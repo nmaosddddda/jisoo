@@ -164,7 +164,7 @@
 .book .more {
     position: absolute; /* warpper */
     left: 0;
-    top: 188px;
+    top: 200px;
 }
 .book .more a {
     padding: 7px 55px 7px 13px;
@@ -261,7 +261,85 @@
     }
 }/*media*/
 
-
+.interview {
+    background-color: #EAE8E7;
+    margin: 169px 0 0 0;
+    padding: 100px 0 116px 0;
+}
+.interview .wrapper {
+    position: relative; /* more 정렬의 기준 */
+}
+.interview .tit {
+    text-align: center;
+    margin: 0 0 100px 0;
+}
+.interview .tit h2 {
+    font-family: 'Eulyoo';
+    font-size: 50px;
+    line-height: 1.2;
+    color: #1d1d1d;
+    margin: 0 0 10px 0;
+}
+.interview .more {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.interview .more a {
+    padding: 7px 55px 7px 13px;
+    border: 1px solid #999;
+    display: inline-block;
+    color: #666;
+    position: relative; /* after 정렬의 기준 */
+}
+.interview .more a::after {
+    position: absolute; /* a를 기준으로 정렬 */
+    right: 5px;
+    top: 4px;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_12_297' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' transform='matrix(-1 0 0 1 25 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_12_297)'%3E%3Cpath d='M14.1122 12.5001L9.86921 16.7428C9.72511 16.8871 9.65132 17.0684 9.64785 17.2868C9.64455 17.505 9.71834 17.6897 9.86921 17.8407C10.0202 17.9916 10.2032 18.067 10.4182 18.067C10.6331 18.067 10.8161 17.9916 10.9671 17.8407L15.6486 13.1592C15.746 13.0616 15.8148 12.9588 15.8549 12.8506C15.895 12.7424 15.915 12.6256 15.915 12.5001C15.915 12.3746 15.895 12.2577 15.8549 12.1496C15.8148 12.0414 15.746 11.9385 15.6486 11.841L10.9671 7.15945C10.8229 7.01535 10.6415 6.94157 10.4231 6.93809C10.2049 6.9348 10.0202 7.00858 9.86921 7.15945C9.71834 7.31049 9.6429 7.49348 9.6429 7.70841C9.6429 7.92334 9.71834 8.10632 9.86921 8.25737L14.1122 12.5001Z' fill='%23666666'/%3E%3C/g%3E%3C/svg%3E%0A");
+    content: "";
+}
+.interview .more a:hover {
+    border-color: #927660;
+    background-color: #927660;
+    color: #fff;
+}
+.interview .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_19_359' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect width='25' height='25' transform='matrix(-1 0 0 1 25 0)' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_19_359)'%3E%3Cpath d='M14.1112 12.5001L9.86823 16.7428C9.72413 16.8871 9.65035 17.0684 9.64688 17.2868C9.64358 17.505 9.71736 17.6897 9.86823 17.8407C10.0193 17.9916 10.2023 18.067 10.4172 18.067C10.6321 18.067 10.8151 17.9916 10.9661 17.8407L15.6477 13.1592C15.7451 13.0616 15.8138 12.9588 15.8539 12.8506C15.894 12.7424 15.9141 12.6256 15.9141 12.5001C15.9141 12.3746 15.894 12.2577 15.8539 12.1496C15.8138 12.0414 15.7451 11.9385 15.6477 11.841L10.9661 7.15945C10.8219 7.01535 10.6405 6.94157 10.4221 6.93809C10.2039 6.9348 10.0193 7.00858 9.86823 7.15945C9.71736 7.31049 9.64193 7.49348 9.64193 7.70841C9.64193 7.92334 9.71736 8.10632 9.86823 8.25737L14.1112 12.5001Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+}
+.interview .list ul {
+    display: flex;
+    justify-content: space-between;
+}
+.interview .list ul li {
+    width: 404px;
+}
+/* 디자인상 무조건 두번째 요소에 적용되는 스타일 */
+.interview .list ul li:nth-child(2) {
+    margin-top: 43px;
+}
+.interview .list ul li a .photo {
+    overflow: hidden;
+    font-size: 0; /* 이미지 하단 여백 삭제 */
+    line-height: 0;
+    border-radius: 60px 0 60px 0;
+}
+.interview .list ul li:nth-child(2) a .photo {
+    border-radius: 0 60px 0 60px;
+}
+.interview .list ul li a .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 감싸는 요소 photo 영역에 이미지 꽉채우기 */
+    transition: 0.5s;
+}
 
 
 footer {
