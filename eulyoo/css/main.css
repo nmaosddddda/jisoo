@@ -339,6 +339,7 @@
     height: 100%;
     object-fit: cover; /* 감싸는 요소 photo 영역에 이미지 꽉채우기 */
     transition: 0.5s;
+    filter: grayscale(100%); 
 }
 
 
