@@ -571,7 +571,7 @@ header.fixed .tnb .search::before {
     content: "";
 }
 /* pc버전에서만 적용 - 641px 이상에서만 적용 */
-@media screen and (min-width:641px){}
+@media screen and (min-width:641px){
         /* li에 on클래스가 들어갔을때 */
         .interview .list ul li.on a {
             display: block;
