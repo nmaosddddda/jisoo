@@ -53,6 +53,12 @@ header {
     */
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+header.fixed {
+    backdrop-filter: blur(5px) brightness(0.8);
+    position: fixed;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 0;
+}
 header .wrapper {
     display: flex;
     justify-content: space-between;
@@ -212,15 +218,27 @@ header .gnb ul li a:hover {
 }
 .tour .list ul li {
     width: 190px;
+    overflow: hidden; /* 내가 준 넓이보다 내부요소가 더 크면 자르기 */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: rgba(255, 255, 255, 0.8);        
+    color: rgba(255, 255, 255, 0.8);   
+    transition: 0.5s;     
 }
 /* li중에서 active 클래스를 갖고 있는 li */
 .tour .list ul li.active {
     width: 618px;
 } 
+.tour .list ul li.active a {
+    width: 618px;
+    /* transition 영향으로 넓이가 0.5초동안
+    190 -> 618px 점점 변함 
+    하지만 a에는 transition이 없기 때문에
+    즉시 넓이가 618px로 고정되기 때문에
+    내부 콘텐츠 넓이가 고정된 
+    p태그의 글이 여러줄로 바뀌는 현상이 사라짐
+    */
+}
 .tour .list ul li.tour1 {
     background-image: url(../images/tour1.png);
 }
@@ -379,6 +397,7 @@ footer {
 footer .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
 }
 footer .f_nav ul {
     display: flex;
@@ -410,13 +429,55 @@ footer .f_info {
 footer .copyright {
     color: #666;
 }
+footer .family {
+    position: relative; /* list 정렬의 기준 */
+}
 footer .family button {
     width: 185px;
     height: 40px;
     border: 1px solid #707070;
     padding: 0 20px;
     text-align: left; /* 버튼의 기본은 가운데 */
-    background: url(../images/more_f.svg) no-repeat right 15px center;  
+    position: relative; /* after 정렬의 기준 */
 }
-
-
+footer .family button::after {
+    position: absolute;
+    right: 17px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+footer .family button.btn__open::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8.214' height='8.214' viewBox='0 0 8.214 8.214'%3E%3Cpath id='add_24dp_FILL0_wght400_GRAD0_opsz24' d='M203.52-755.306h-2.934a.568.568,0,0,1-.418-.169.568.568,0,0,1-.169-.418.568.568,0,0,1,.169-.418.568.568,0,0,1,.418-.169h2.934v-2.934a.568.568,0,0,1,.169-.418.568.568,0,0,1,.418-.169.568.568,0,0,1,.418.169.568.568,0,0,1,.169.418v2.934h2.934a.568.568,0,0,1,.418.169.568.568,0,0,1,.169.418.568.568,0,0,1-.169.418.568.568,0,0,1-.418.169h-2.934v2.934a.568.568,0,0,1-.169.418.568.568,0,0,1-.418.169.568.568,0,0,1-.418-.169.568.568,0,0,1-.169-.418Z' transform='translate(-200 760)' fill='%23666'/%3E%3C/svg%3E%0A");
+}
+footer .family button.btn__close {
+    display: none; /* 닫혀있는 상태에서는 안보임 */
+}
+footer .family button.btn__close::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='1.764' viewBox='0 0 9 1.764'%3E%3Cpath id='remove_24dp_FILL0_wght400_GRAD0_opsz24' d='M200-518.236V-520h9v1.764Z' transform='translate(-200 520)' fill='%235f6368'/%3E%3C/svg%3E%0A");
+}
+footer .family .list {
+    display: none; /* 닫혀있는 상태에서 안보임 */
+    position:absolute; /* family를 기준으로 정렬 */
+    left: 0;
+    bottom: 39px;
+    border: 1px solid #707070;
+    background-color: #fff;
+    width: 100%;
+    padding: 12px 20px;
+}
+footer .family .list ul li a {
+    display: block; /* 글자 옆에 여백도 넓게 클릭되도록 */
+    line-height: 2;
+}
+/* family가 열렸을 때 */
+footer .family.open button.btn__open {
+    display: none;
+}
+footer .family.open button.btn__close {
+    display: block;
+}
