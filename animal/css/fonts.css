@@ -5,6 +5,12 @@
 	src: local('S-CoreDream Regular'), url(../fonts/SCoreDreamRegular.woff2) format('woff2'), url(../fonts/SCoreDreamRegular.woff) format('woff');
 }
 @font-face {
+    font-family: 'S-CoreDream';
+    font-weight: 800;
+    font-style: normal;
+	src: local('S-CoreDream Bold'), url(../fonts/SCoreDreamBold.woff2) format('woff2'), url(../fonts/SCoreDreamBold.woff) format('woff');
+}
+@font-face {
     font-family: 'TRW';
     font-weight: 800;
     font-style: normal;
