@@ -446,18 +446,18 @@ header.menu_over::before {
 .visual .slogan {
     position: absolute;
     left: 5%;
-    z-index: 10;
     bottom: -113px;
+    z-index: 10;
+    width: 210px;
+    height: 210px;
     mix-blend-mode: difference;
 }
 .visual .slogan .img {
     width: 100%;
 }
-@media screen and (max-width:1300px){
+@media screen and (max-width:768px){
     .visual .slogan {
-        left: 10px;
-        width: 100px;
-        height: 100px;
+        display: none;
     }
 }
 @media screen and (max-width:1024px){
@@ -986,7 +986,11 @@ header.menu_over::before {
 .family .list .btn_wrap .more:hover::after {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.983' height='12.983' viewBox='0 0 12.983 12.983'%3E%3Cpath id='add_24dp_FILL1_wght300_GRAD0_opsz24' d='M225.742-732.76h-4.993a.724.724,0,0,1-.534-.215.725.725,0,0,1-.215-.534.724.724,0,0,1,.215-.534.724.724,0,0,1,.534-.215h4.993v-4.994a.724.724,0,0,1,.215-.533.725.725,0,0,1,.534-.215.723.723,0,0,1,.534.215.724.724,0,0,1,.215.533v4.994h4.993a.724.724,0,0,1,.534.215.725.725,0,0,1,.215.534.724.724,0,0,1-.215.534.725.725,0,0,1-.534.215H227.24v4.994a.724.724,0,0,1-.215.534.725.725,0,0,1-.534.216.724.724,0,0,1-.534-.216.725.725,0,0,1-.215-.534Z' transform='translate(-220 740)' fill='%2346a3a7'/%3E%3C/svg%3E%0A");
 }
-
+@media screen and (max-width:1300px){
+    .family .list ul li a strong {
+        font-size: 18px;
+    }
+ }
 @media screen and (max-width:768px){ 
     .family .list .btn_wrap {
         margin: 43px 0 0 0;
