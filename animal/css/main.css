@@ -453,7 +453,13 @@ header.menu_over::before {
 .visual .slogan .img {
     width: 100%;
 }
-
+@media screen and (max-width:1300px){
+    .visual .slogan {
+        left: 10px;
+        width: 100px;
+        height: 100px;
+    }
+}
 @media screen and (max-width:1024px){
     .visual ul li .wrapper{
         height: 700px;
