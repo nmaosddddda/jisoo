@@ -2,6 +2,7 @@
 @import url(fonts.css);
 @import url(common.css);
 
+
 header {
     position: absolute;
     left: 0;
@@ -171,6 +172,8 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 100px; /* header의 높이 */
+        height: calc(100vh - 100px); /* 브라우저의 높이에 상단 여백값을 뺀 값이 높이 */
+        overflow-y: auto; /* ul내부의 li의 길이가 지정한 높이보다 짧거든 스크롤바를 생성 */
     }
     header .gnb .gnb_wrap ul.depth1 > li  {
         border-bottom: 1px solid #2d2d2d;
@@ -182,7 +185,7 @@ header .logo a::before {
         font-size: 20px;
         font-weight: 700;
         display: block;
-        line-height: 50px;
+        line-height: 55px;
         color: #1d1d1d;
         padding: 0 20px ;
         position: relative; /* after 정렬의 기준 */
@@ -190,7 +193,7 @@ header .logo a::before {
     header .gnb .gnb_wrap ul.depth1 > li > a::after {
         position: absolute;
         right: 34px;
-        top: 20px;
+        top: 24px;
         width: 15px;
         height: 9px;
         background-position: center center;
@@ -241,6 +244,7 @@ header .logo a::before {
     }
     header .gnb .gnb_wrap ul.depth1 {
         margin-top: 50px; /* header의 높이 */
+        height: calc(100vh - 50px);
     }
 }/*media*/
 
