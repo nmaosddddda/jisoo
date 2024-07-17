@@ -17,13 +17,13 @@
     text-align: center;
 }
 .visual ul li.bg1 {
-    background-image: url(../images/visual_bg1.png);
+    background-image: url(../images/main/visual_bg1.png);
 }
 .visual ul li.bg2 {
-    background-image: url(../images/visual_bg2.png);
+    background-image: url(../images/main/visual_bg2.png);
 }
 .visual ul li.bg3 {
-    background-image: url(../images/visual_bg3.png);
+    background-image: url(../images/main/visual_bg3.png);
 }
 .visual ul li h3 {
     font-size: 45px;
@@ -150,3 +150,194 @@
     }
 }/*media*/
 
+.biz .tit h2 {
+    font-weight: 700;
+    color: #DE0000;
+    margin: 135px 0 0 0;
+}
+.biz .tit h2 span {
+    position: relative; /* after 정렬의 기준 */
+}
+.biz .tit h2 span::after {
+    position: absolute;
+    right: -10px;
+    top: -3px;
+    width: 10px;
+    height: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10.209' height='10.21' viewBox='0 0 10.209 10.21'%3E%3Cpath id='패스_1' data-name='패스 1' d='M155.351,4.057a1.133,1.133,0,0,0,.077.425,1.221,1.221,0,0,0,1.689.674l5.521-2.224s-2.1,5.321-2.178,5.519a1.234,1.234,0,0,0,.686,1.684,1.187,1.187,0,0,0,.424.075,1.25,1.25,0,0,0,1.181-.9l.995-2.732,1.721-4.737a2.016,2.016,0,0,0,.1-.511A1.307,1.307,0,0,0,164.237,0a1.6,1.6,0,0,0-.521.1c-.125.041-6.89,2.558-7.469,2.773a1.268,1.268,0,0,0-.9,1.187' transform='translate(-155.351 0)' fill='%23e50019'/%3E%3C/svg%3E%0A");
+    content: "";
+}
+.biz .tit p {
+    font-size: 45px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 6px 0 63px 0;
+}
+.biz .list ul {
+    display: flex;
+}
+.biz .list ul li {
+    width: 25%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    position: relative; /* before 정렬의 기준 */
+    transition: 0.5s;
+}
+.biz .list ul li.biz1 {
+    background-image: url(../images/main/biz_bg1.png);
+}
+.biz .list ul li.biz2 {
+    background-image: url(../images/main/biz_bg2.png);
+}
+.biz .list ul li.biz3 {
+    background-image: url(../images/main/biz_bg3.png);
+}
+.biz .list ul li.biz4 {
+    background-image: url(../images/main/biz_bg4.png);
+}
+.biz .list ul li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+    content: "";
+}
+.biz .list ul li a {
+    display: block;
+    height: 620px;
+    position: relative;
+    z-index: 10;
+    /* li의 before가 position값이 있으면 a보다 더 위에 배치
+        a를 before에 배치하려면
+        a를 position값을 주고 z-index를 줌
+    */
+}
+.biz .list ul li a .inner {
+    margin: 0 30px;
+    /* a를 기준으로 정렬
+    마우스를 오버햇을때 효과을 부드럽게 주기 위해서 absolute */
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 90%;
+    transition: 0.5s;
+}
+.biz .list ul li a .inner strong {
+    display: block;
+}
+.biz .list ul li a .inner h3 {
+    font-size: 40px;
+    margin-bottom: 9px;
+    transition: 0.5s;
+    white-space: nowrap;
+}
+.biz .list ul li a .inner p {
+    opacity: 0;
+    transition: 0.5s;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* 하나의 li에 오버했을때*/
+
+.biz .list ul li.on {
+    width: 60%;
+}
+.biz .list ul li.off {
+    /*width: 16%;*/
+}
+.biz .list ul li.on::before {
+    opacity: 0;
+}
+.biz .list ul li.off::before {
+    opacity: 0.4;
+}
+.biz .list ul li.off a {
+    opacity: 0.8;
+}
+.biz .list ul li.on a .inner {
+    bottom: 70px;
+}
+.biz .list ul li.on a .inner h3 {
+    font-weight: 700;
+}
+.biz .list ul li.on a .inner p {
+    opacity: 1;
+}
+
+@media screen and (max-width:1300px){
+    .visual ul li h3 {
+        font-size: 30px;
+    }
+    .biz .tit p {
+        font-size: 30px;
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 25px;
+    }
+}/*media*/
+@media screen and (max-width:1024px){
+    .biz .tit h2 {
+        margin: 90px 0 0 0;
+    }
+    .biz .tit p {
+        margin: 6px 0 50px 0;
+    }
+    .biz .list {
+        overflow-x: auto;
+        /* list의 넓이보다 ul의 넓이가 더 넓으면 
+            가로 스크롤바를 생성 - 스크롤 허용 */
+    }
+    .biz .list ul {
+        margin: 0 20px;
+        gap: 16px;
+        width: 1048px;
+        /*
+            ul의 넓이 안에서 li의 무조건 한줄로 표현 - flex
+            flex로 좌우로 배치 - 하지만 반드시 li의 넓이를 
+            유지하려면 ul의 넓이를 늘림
+
+            li한개 넓이 250px * 4 = 1000px
+            사이 여백 16px *3 = 48px
+            1000 + 48 = 1048px
+        */
+    }
+    .biz .list ul li {
+        width: 250px;
+    }
+    .biz .list ul li a {
+        height: 360px;
+    }
+    .biz .list ul li a .inner {
+        bottom: 10px;
+    }
+    
+}/*media*/
+@media screen and (max-width:768px){
+    .biz .tit h2 {
+        font-size: 13px;
+    }
+    .visual ul li h3 {
+        font-size: 25px;
+        margin: 177px 0 0 0;
+    }
+    .biz .tit p {
+        font-size: 25px;
+        margin: 3px 0 33px 0;
+    }
+    .biz .list ul li a .inner {
+        bottom: 0;
+        margin: 0 25px;
+    }
+    .biz .list ul li a .inner h3 {
+        font-size: 20px;
+    }
+}/*media*/
