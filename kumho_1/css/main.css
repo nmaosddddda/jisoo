@@ -659,7 +659,8 @@ section.service .tit p {
         text-align: center;
     }
     .service .list ul li:hover a {
-        transform: translate(-10px, -10px);
+        transform: translate(0, 0);
+        box-shadow: none;
     }
     .service .list ul li a .inner {
         margin: 0 ;
