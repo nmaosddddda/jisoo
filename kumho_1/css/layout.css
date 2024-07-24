@@ -94,7 +94,7 @@ header.fixed .logo a::before {
         font-weight: 700;
         color: #EA141D;
     }
-    header .gnb .gnb_wrap ul.depth1 > li.on > a > span {
+    header .gnb .gnb_wrap ul.depth1 > li > a > span {
         position: relative; /* after 정렬의 기준 */
     }
     header .gnb .gnb_wrap ul.depth1 > li.on > a > span::after {
@@ -105,6 +105,16 @@ header.fixed .logo a::before {
         height: 6px;
         border-radius: 50%;
         background-color: #EA141D;
+        content: "";
+    }
+    /* 서브페이지에서 선택된 메뉴 디자인 */
+    header .gnb .gnb_wrap ul.depth1 > li.active > a > span::before {
+        position: absolute;
+        left: -5px;
+        bottom: -37px;
+        width: calc(100% + 10px);
+        height: 2px;
+        background-color: #fff;
         content: "";
     }
     header .gnb .gnb_wrap ul.depth2 {
@@ -354,6 +364,10 @@ header.fixed .logo a::before {
         line-height: 2;
         font-size: 15px;
     }
+    header .gnb .gnb_wrap ul.depth2 > li.active > a {
+        color: #EA141D;
+        font-weight: 700;
+    } 
     header .gnb .gnb_close {
         display: none; /* 숨김 */
         position: absolute; /* header를 기준으로 정렬 */
@@ -746,6 +760,13 @@ footer .copyright {
 .sub_menu .breadcrumb ol li.now a {
     text-decoration: underline;
 }
+.sub_contents {
+    min-height: 400px;
+    /* 콘텐츠의 최소높이
+       - 아직 콘텐츠를 코딩하지 않았을때
+         페이지만 생성되어 있어서 페이지의 여백이 없어서 디자인이 이상하게 보임
+         -> 이런 현상을 최소화 하기 위해서 */
+}
 .sub_contents .sub_title h2 {
     color: #EA141D;
     font-weight: 700;
@@ -757,3 +778,70 @@ footer .copyright {
     font-weight: 700;
     line-height: 1.1;
 }
+
+@media screen and (max-width:1300px){
+    .sub_visual strong {
+        font-size: 35px;
+    }
+}/*media*/
+@media screen and (max-width:1024px){ 
+    .sub_visual {
+        height: 300px;
+     }
+     .sub_visual strong {
+        font-size: 25px;
+        padding: 188px 0 5px 0;
+    }
+    
+    .sub_visual p {
+        font-size: 13px;
+    }
+    .sub_menu {
+        height: 45px;
+        position: relative; /* after 정렬의 기준 */
+    }
+    .sub_menu::after {
+        position: absolute;
+        right: 20px; /* 오른쪽 wrapper 여백 */
+        top: 0;
+        width: 15px;
+        height: 100%;
+        background-image: linear-gradient(90deg, rgba(45,45,45,0),rgba(45,45,45,1));
+        content: "";
+    }
+    .sub_menu .wrapper {
+        /* 만약 모바일에서 메뉴의 수가 많아서 한번에 모두 표현되지 않으면
+           가로 스크롤바가 생성되어야함 - 메뉴를 감싸는 요소 flex를 준 요소 */
+           overflow-y: auto; /* 내부요소가 감싸는 요소보다 더 넓어지면 가로 스크롤바 생성 */     
+    }
+    .sub_menu .wrapper::-webkit-scrollbar {
+        height: 0;
+        background-color: transparent; /* 투명 */
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+    .sub_menu .wrapper::-webkit-scrollbar-track {
+        background-color: transparent;/* 투명 */
+    }
+    .sub_menu .lnb {
+        margin-right: 15px; /* 오른쪽 그라데이션 준 만큼 추가 여백 - 마지막 메뉴가 그라데이션에 가릴까봐 */
+    }
+    .sub_menu .lnb ul li a {
+        line-height: 45px;
+    }
+    .sub_menu .breadcrumb {
+        display: none;
+    }
+}/*media*/
+@media screen and (max-width:768px){
+    .sub_visual strong {
+        padding: 130px 0 5px 0;
+    }
+    .sub_contents .sub_title h2 {
+        margin: 60px 0 3px 0;
+    }
+    .sub_contents .sub_title p {
+        font-size: 25px;
+    }
+}/*media*/
