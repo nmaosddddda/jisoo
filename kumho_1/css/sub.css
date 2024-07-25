@@ -16,5 +16,68 @@
 .cts_ceo .photo {
     overflow: hidden;
     font-size: 0;
-    line-height: 0;
+    line-height: 1.1;
 }
+.cts_ceo .photo .inner {
+    display: flex;
+    background: url(../images/contents/ceo_bg1.png) no-repeat center center / cover;
+}
+.cts_ceo .photo .inner p {
+    font-size: 20px;
+    padding: 200px 0 0 0;
+} 
+.cts_ceo .photo .inner .img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cts_ceo .photo .inner p span {
+    color: #1d1d1d;
+    font-weight: 700;
+}
+.cts_ceo .txt {
+    margin: 60px 0 120px 0;
+}
+.cts_ceo .txt p {
+    line-height: 1.5;
+}
+.cts_ceo .txt strong {
+    font-weight: 700;
+    color: #1d1d1d;
+} 
+.cts_ceo .txt .sign {
+    display: flex;
+    margin-top: 60px;
+}
+.cts_ceo .txt .sign strong {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d1d1d;
+    margin: 18px 24px 0 0;
+}
+@media screen and (max-width:1300px){
+
+}/*media*/
+@media screen and (max-width:1024px){
+    .cts_ceo {
+        margin: 20px 0 250px 0;
+    }
+    .cts_ceo .photo .inner {
+        height: 360px;
+    }
+    .cts_ceo .photo .inner p {
+        font-size: 15px ;
+    }
+    .cts_ceo .txt .sign {
+        margin-top: 30px;
+    }
+    .cts_ceo .txt .sign strong {
+        font-size: 15px;
+    }
+    .cts_ceo .txt p {
+        line-height: 1.1;
+    }
+}/*media*/
+@media screen and (max-width:768px){
+
+}/*media*/
