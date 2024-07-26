@@ -309,5 +309,22 @@
     }
 }/*media*/
 @media screen and (max-width:768px){
-   
+    .cts_history .history_list::before {
+        left: 0;
+        top: 17px;
+        height: calc(100% - 17px);
+    }
+    .cts_history .history_list .year_wrap h4 {
+        font-size: 20px;
+    }
+    .cts_history .history_list .year_wrap h4::before {
+        width: 9px;
+        height: 9px;
+        left: -24px;
+        top: 9px;
+    }
+    .cts_history .history_list .year_wrap:last-child::before {
+        top: 17px;
+        height: calc(100% - 17px);
+    }
 }/*media*/
