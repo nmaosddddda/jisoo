@@ -618,6 +618,14 @@
         height: 38px;
         padding: 11px 16px;
     }
+    .cts_map .map_wrap .tel .list li.inq_link a::after {
+        top: 11px;
+        width: 12px;
+        height: 12px;
+    }
+    .cts_map .pt {
+        margin-top: 50px;
+    }
     .cts_map .pt h2 {
         font-size: 20px;
     }
