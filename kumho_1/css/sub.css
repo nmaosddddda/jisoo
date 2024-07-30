@@ -113,6 +113,12 @@
     color: #fff;
     font-weight: 700;
 }
+.cts_history .tab_area .tab_cnt div[role="tabpanel"] {
+    display: none;
+}
+.cts_history .tab_area .tab_cnt div[role="tabpanel"].active {
+    display: block;
+}
 /* div 중에서 role="tabpanel" 속성을 가진 div 선택 */
 .cts_history .tab_area .tab_cnt div[role="tabpanel"] .history_tit {
     height: 350px;
