@@ -1,0 +1,23 @@
+/* header와 footer 처럼 페이지에 공통으로 배치되는 요소의 css */
+
+.skipnav {
+    position: absolute;
+    left: 0;
+    top: -100px; /* focus가 될때만 나타나야함 - 상단에 숨겨져 있어야함 */
+    z-index: 99999999999; /* 꼭 맨 상단에 배치 */
+    width: 100%;
+}
+.skipnav a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #EA141D;
+    color: #fff;
+    text-align: center;
+}
+.skipnav a:focus {
+    top: 100px; /* a가 포커스되면 올라간 만큼 다시 내려옴 */
+}
