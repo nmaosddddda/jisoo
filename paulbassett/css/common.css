@@ -6,9 +6,9 @@
 영문,순자,특수문자는 영문 폰트가 적용, 나머지 한글은 한글 폰트 적용
 */
 html, body {
-    font-family: "Dancing Script", "Pretendard", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
-    font-weight: 500;
-    font-size: 15px;
+    font-family: "NanumSquareNeo", "Malgun Gothic", "맑은 고딕", Dotum, 돋움, Helvetica, "Apple SD Gothic Neo", "애플 SD 산돌고딕 Neo", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
     letter-spacing: 0; /* 자간 */
     line-height: 1.4; /* 배수 - 글자크기에 1.4배 */
     color: #3d3d3d; /* 글자 색상 */
@@ -29,6 +29,9 @@ html, body {
 /* 1260px 나의 wrapper의 넓이에 좌우 여백 20px씩 추가한 사이즈부터
    반응형 */
 @media screen and (max-width:1300px){
+    html, body {
+        font-size: 15px;
+    }
     #wrap {
         min-width: 100%;
     }
@@ -48,35 +51,26 @@ html, body {
     }
 }/* media */
 
-/* 클릭하는 요소 a button - focus가 되었을때 스타일 변경 */
-/* a:focus,
-button:focus {
-    outline: 3px dashed #EA141D; 
-} */
-
 ::selection {
-    background-color: #920c24;
+    background-color: #d04040;
     color: #fff;
 }
 
-/* 
-    기본이 15px일때
-    200px - 13.33 rem
-    100px - 6.66 rem
-    50px - 3.33 rem
-    25px - 1.66 rem
-    20px - 1.33 rem
-    15px - 1 rem
-    13px - 0.86 rem    
+/*
+    기본이 16px일때
+    150px - 9.36rem
+    40px - 2.50rem
+    20px - 1.25rem
+    16px - 1rem
 */
 
 :root {
-    --color-main-red : #920c24;
-    --color-main-brown : #2e0806;
+    --color-main1 : #d04040;
+    --color-main2 : #744c29;
     --txt-color-tit : #1d1d1d;
     --txt-color-gray : #666;
     --txt-color-white : #fff;
     --txt-color-w80 : rgba(255,255,255,0.8);
-    --txt-color-w80 : rgba(255,255,255,0.6);
-    --txt-size-tit : 13.33rem; 
-}       
+    --txt-color-w60 : rgba(255,255,255,0.6);
+    --txt-size-tit : 9.36rem;
+}
