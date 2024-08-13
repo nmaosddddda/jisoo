@@ -73,20 +73,24 @@ html, body {
     --txt-color-w80 : rgba(255,255,255,0.8);
     --txt-color-w60 : rgba(255,255,255,0.6);
     --txt-size-tit : 9.36rem;
+    --margin-tit : 100px 0 70px 0;
 }
 
 @media screen and (max-width:1300px){
     :root {
         --txt-size-tit : 8rem;
+        --margin-tit : 80px 0 60px 0;
     }
 }
 @media screen and (max-width:1024px){
     :root {
         --txt-size-tit : 6.5rem;
+        --margin-tit : 50px 0 35px 0;
     }
 }
 @media screen and (max-width:768px){
     :root {
         --txt-size-tit : 5.385rem;
+        --margin-tit : 40px 0 30px 0;
     }
 }

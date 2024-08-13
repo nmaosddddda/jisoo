@@ -42,7 +42,7 @@
 
 .menu .tit {
     text-align: center;
-    margin: 100px 0 70px 0;
+    margin: var(--margin-tit);
 }
 .menu .tit h2 {
     font-family: 'rene';
@@ -115,4 +115,185 @@
 }
 @media screen and (max-width:375px){
 
+}
+
+.brand {
+    margin: 155px 0 0 0; 
+}
+.brand .inner {
+    height: 639px;
+    padding: 414px 0 0 70px;
+    background: url(../images/main/brand_bg.png) no-repeat center center / cover;
+    color: #fff;
+}
+.brand .inner h2 {
+    font-family: 'rene';
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+.brand .inner h2 span {
+    display: inline-block;
+    padding: 0 10px 3px 10px;
+    background-color: #fff;
+    color: var(--txt-color-tit);
+}
+/* loop 애니메이션을 줄때
+    <div> -- 감싸는 요소
+        <span></span> -- 움직일 요소
+    </div> 
+    움직일 요소는 white-space: nowrap;으로 한줄
+    넓이가 온전하게 인식 되어야함
+    브라우저 크기를 초과하는 넓이가 온전히 인식되어야함
+    --- 넓이가 온전히 인식되지 않는 경우 position:abosilute;를 줘야함 
+    */
+.brand .loop {
+    height: 8.75rem;
+    padding-top: 2.2rem;
+    background-color: var(--txt-color-tit);
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    position: relative; /* span 정렬의 기준 */
+}
+.brand .loop span {
+    white-space: nowrap; /* 줄바꿈 금지 */
+    position: absolute;
+    left: 0;
+    top: 2.2rem;
+    animation-name: brand_loop;
+    animation-duration: 20s;
+    animation-iteration-count: infinite; /* 무한반복 */
+    animation-timing-function: linear; /* 가속도 삭제*/
+}
+@keyframes brand_loop {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(-50.12%, 0);}/* 첫글자가 다시 맨 앞으로 도달한 값 */
+}
+@media screen and (max-width:1300px){
+    .brand {
+        margin: 130px 0 0 0; 
+    }
+    .brand .inner {
+        height: 550px;
+        padding: 350px 0 0 50px;
+    }
+}
+@media screen and (max-width:1024px){
+    .brand {
+        margin: 70px 0 0 0; 
+    }
+    .brand .inner {
+        height: auto;
+        padding: 150px 0 40px 20px;
+    }
+    .brand .inner h2 span {
+       background-color: transparent;
+       color: #fff;
+    }
+    .brand .loop {
+        height: 4rem;
+        font-size: 1.25rem;
+    }
+    .brand .loop span {
+        top: 1.1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .brand .inner .mo_skip {
+        display: none;
+    }
+}
+
+.md .tit {
+    text-align: center;
+    margin: var(--margin-tit);
+}
+.md .tit h2 {
+    font-family: 'rene';
+    line-height: 1;
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-tit);
+}
+.md .list .popup .popup_item {
+    margin: 0 12px;
+    width: 297px;
+    text-align: center;
+}
+.md .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 5px;
+}
+.md .list .popup .popup_item .photo .img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지가 하나도 안짤리고 모두 나오기 */
+}
+.md .list .popup .popup_item h3 {
+    color: var(--txt-color-tit);
+}
+
+.event .tit {
+    margin: 150px 0 35px 0;
+}
+.event .tit h2 {
+    display: none;
+}
+.event .tit ul {
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 */
+    position: relative;
+}
+.event .tit ul::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: calc(100% - 110px);
+    height: 1px;
+    background-color: #ededed;
+    content: "";
+}
+.event .tit ul li a {
+    display: block;
+    font-size: 0;
+    list-style: 0;
+    width: 27px;
+    height: 27px;
+    position: relative; /* before 정렬의 기준 */   
+}
+.event .tit ul li a::before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+} 
+.event .tit ul li.facebook a::before {
+    width: 27px;
+    height: 27px;
+    background-image: url(../images/main/sns_1.png);
+}
+.event .tit ul li.insta a::before {
+    width: 27px;
+    height: 27px;
+    background-image: url(../images/main/sns_2.png);
+}
+.event .tit ul li.youtube a::before {
+    width: 27px;
+    height: 19px;
+    background-image: url(../images/main/sns_3.png);
+}
+.event .list .popup .popup_item {
+    margin: 0 6px;
+}
+.event .list .popup .popup_item .photo {
+    overflow: hidden;
+}
+.event .list .popup .popup_item .photo .img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
