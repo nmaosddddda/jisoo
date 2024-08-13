@@ -1,0 +1,118 @@
+@import url(default.css);
+@import url(fonts.css);
+@import url(common.css);
+@import url(layout.css);
+
+
+.visual_popup .popup .popup_item img {
+    width: 100%;
+}
+.visual_popup .popup .popup_item img.mo {
+    display: none;
+}
+.visual_popup .popup .slick-dots {
+    position: absolute; /* popup을 기준으로 정렬 */
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50, 0);
+    /* 좌우에 가운데 */
+    display: flex;
+    gap: 5px;
+}
+.visual_popup .popup .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    width: 26px;
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.5);
+}
+.visual_popup .popup .slick-dots li.slick-active button {
+    width: 48px;
+    background-color: #fff;
+}
+@media screen and (max-width:768px){
+    .visual_popup .popup .popup_item img.pc {
+        display: none;
+    }
+    .visual_popup .popup .popup_item img.mo {
+        display: block;
+    }
+}
+
+.menu .tit {
+    text-align: center;
+    margin: 100px 0 70px 0;
+}
+.menu .tit h2 {
+    font-family: 'rene';
+    font-size: var(--txt-size-tit);
+    color: var(--txt-color-tit);
+    line-height: 1;
+}
+.menu .list .popup .popup_item {
+    margin: 0 12px;
+    position: relative; /* before 정렬의 기준 */
+    text-align: center;
+    padding-bottom: 28px;
+    width: 297px;
+}
+.menu .list .popup .popup_item::before {
+    position: absolute;
+    left: 0;
+    top: 86px;
+    z-index: -1;
+    width: 100%;
+    height: calc(100% - 92px); /* top값 + border 두배 */
+    border: 3px solid #3d3d3d;
+    content: "";
+}
+.menu .list .popup .popup_item .photo {
+    overflow: hidden;
+    margin: 0 10px;
+}
+.menu .list .popup .popup_item .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 이미지를 자르지 않고 모두 보이도록 */
+}
+.menu .list .popup .popup_item h3 {
+    color: var(--txt-color-tit);
+    font-size: 1.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+    padding: 0 10px;
+    /* 제목 무조건 2줄 */
+    height: 2.2em; /* 행간 X 2 */
+    overflow: hidden;
+    margin: 24px 0 12px 0;
+}
+.menu .list .popup .popup_item strong {
+    display: block;
+    padding: 0 10px;
+    /* 무조건 1줄 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width:1300px){
+    .menu .list .popup .popup_item {
+        width: 250px;
+    }
+}
+@media screen and (max-width:1024px){
+    .menu .list .popup .popup_item {
+        width: 230px;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width:768px){
+    .menu .list .popup .popup_item {
+        width: 208px;
+        margin: 0 8px;
+    }
+}
+@media screen and (max-width:375px){
+
+}

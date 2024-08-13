@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/main.js"></script>
+    <!--slick을 돌아가게 하는 값-->
+    <script src="js/slick.min.js"></script>
+    <link rel="stylesheet" href="css/slick.css">
+    <title>Paul Bassett</title>
+</head>
+<body>
+    <div class="skip_nav">
+        <a href="#skip_contents">본문 바로가기</a>
+        <a href="#skip_menu">대메뉴 바로가기</a>
+    </div>
+    <div id="wrap">
+        <!--
+            pc버전에서 메뉴에 마우스를 오버했을때 menu_over
+            모바일버전에서 메뉴를 클릭해서 열었을때 menu_open
+            상단에 메뉴가 고정될때 fixed
+        -->
+        <header>
+            <div class="wrapper">
+                <div class="header_top">
+                    <div class="tnb">
+                        <ul>
+                            <li><a href="#n">신규입점제의</a></li>
+                            <li><a href="#n">납품문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="tnb">
+                        <ul>
+                            <li><a href="#n">로그인</a></li>
+                            <li><a href="#n">문의하기</a></li>
+                            <li><a href="#n">고객센터</a></li>
+                        </ul>
+                    </div>
+                </div><!--header_top-->
+                <div class="header_sub">
+                    <h1 class="logo"><a href="index.html">폴바셋</a></h1>
+                    <nav class="gnb" id="skip_menu">
+                        <button class="gnb_open">메뉴열기</button>
+                        <div class="gnb_wrap">
+                            <ul class="depth1">
+                                <!--
+                                    pc버전에서 메뉴에 마우스를 오버하면 over
+                                    모바일 버전에서 메뉴가 열리면 open
+                                -->
+                                <li>
+                                    <a href="https://www.naver.com"><span>ABOUT US</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>Brand</span></a></li>
+                                        <li><a href="#n"><span>회사소개</span></a></li>
+                                        <li><a href="#n"><span>CSR</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>MENU</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>NEW</span></a></li>
+                                        <li><a href="#n"><span>COFFEE</span></a></li>
+                                        <li><a href="#n"><span>BEVERAGE</span></a></li>
+                                        <li><a href="#n"><span>ICE-CREAM</span></a></li>
+                                        <li><a href="#n"><span>FOOD</span></a></li>
+                                        <li><a href="#n"><span>PRODUCT</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>STORE</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>매장찾기</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>SOCIETY</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>Paul Bassett Society</span></a></li>
+                                        <li><a href="#n"><span>회원 등급 혜택</span></a></li>
+                                        <li><a href="#n"><span>e-Card 선물</span></a></li>
+                                        <li><a href="#n"><span>모바일 App 안내</span></a></li>
+                                        <li><a href="#n"><span>제휴혜택 안내</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>WHAT'S NEW</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>Event / News</span></a></li>
+                                        <li><a href="#n"><span>Notice</span></a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#n"><span>E-SHOP</span></a>
+                                    <ul class="depth2">
+                                        <li><a href="#n"><span>E-SHOP 소개</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="gnb_close">메뉴닫기</button>
+                    </nav>
+                </div><!--header_sub-->
+            </div><!--wrapper-->
+        </header>
+        <main class="container" id="skip_contents">
+            <section class="visual_popup">
+                <div class="popup">
+                    <div class="popup_item">
+                        <img src="images/main/popup01.png" class="pc" alt="내 여름아 힘내">
+                        <img src="images/main/popup01_m.png" class="mo" alt="내 여름아 힘내">
+                    </div>
+                    <div class="popup_item">
+                        <img src="images/main/popup02.png" class="pc" alt="푸쉬 수신 동의">
+                        <img src="images/main/popup02_m.png" class="mo" alt="푸쉬 수신 동의">
+                    </div>
+                    <div class="popup_item">
+                        <img src="images/main/popup03.png" class="pc" alt="모든 혜택 배달 데이">
+                        <img src="images/main/popup03_m.png" class="mo" alt="모든 혜택 배달 데이">
+                    </div>
+                </div>
+            </section>
+            <section class="menu">
+                <div class="tit">
+                    <div class="wrapper">
+                        <h2>Menu</h2>
+                        <p>스페셜티 전문 브랜드 폴 바셋은 성장하고 있습니다.</p>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="popup">
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu01.png" alt="메뉴 사진"></div>
+                                <h3>초코 생크림 <br>케이크</h3>
+                                <strong>Chocolate Fresh Cream Cake</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu02.png" alt="메뉴 사진"></div>
+                                <h3>(EX) 아샷추</h3>
+                                <strong>Peach Iced Tea with Espresso</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu03.png" alt="메뉴 사진"></div>
+                                <h3>허니 카라멜 <br>브레드</h3>
+                                <strong>Honey Caramel Bread</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu04.png" alt="메뉴 사진"></div>
+                                <h3>(EX) 아망추</h3>
+                                <strong>Peach Iced Tea with Mango</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu05.png" alt="메뉴 사진"></div>
+                                <h3>딸기쿠키 <br>아이스크림</h3>
+                                <strong>Strawberry Cookie Ice Cream</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu06.png" alt="메뉴 사진"></div>
+                                <h3>(L) HOT 디카페인 <br>카페 모카</h3>
+                                <strong>HOT Decaffeine Cafe Mocha</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu07.png" alt="메뉴 사진"></div>
+                                <h3>에티오피아 G1 <br>내추럴 콜드브루</h3>
+                                <strong>Iced Mellow Uva Tea</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu08.png" alt="메뉴 사진"></div>
+                                <h3>초코퍼지 토핑 <br>아이스크림</h3>
+                                <strong>Choco Fudge Ice Cream</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu09.png" alt="메뉴 사진"></div>
+                                <h3>쿨 민트 <br>베리 에이드</h3>
+                                <strong>Cool Mint Berry Ade</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu10.png" alt="메뉴 사진"></div>
+                                <h3>아이스 <br>카페라떼</h3>
+                                <strong>Iced Cafe Latte</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu11.png" alt="메뉴 사진"></div>
+                                <h3>BELT <br>샌드위치</h3>
+                                <strong>BELT Sandwich</strong>
+                            </a>
+                        </div>
+                        <div class="popup_item">
+                            <a href="#n">
+                                <div class="photo"><img src="images/main/menu12.png" alt="메뉴 사진"></div>
+                                <h3>수박 주스</h3>
+                                <strong>Watermelon Juice</strong>
+                            </a>
+                        </div>
+                    </div><!--popup-->
+                </div><!--list-->
+            </section>
+            <section class="brand">
+                <div class="wrapper"></div>
+            </section>
+            <section class="md">
+                <div class="wrapper"></div>
+            </section>
+            <section class="event">
+                <div class="wrapper"></div>
+            </section>
+        </main>
+        <aside class="quick">
+            <button title="퀵메뉴 열기" class="open">QUICK</button>
+            <div class="quick_cont">
+                <h2>Quick<br>Menu</h2>
+                <ul>
+                    <!-- 다른 페이지 이동은 a이고, jquery작동시키는 버튼은 button(이동X) -->
+                    <li class="q01"><a href="#n"><span>Mobile<br>App</span></a></li>
+                    <li class="q02"><a href="#n"><span>Special<br>Benefit</span></a></li>
+                    <li class="q03"><a href="#n"><span>e-shop</span></a></li>
+                    <li class="q04"><button class="top"><span>TOP</span></button></li>
+                </ul>
+            </div>
+            <button title="퀵메뉴 닫기" class="close">닫기</button>
+        </aside>
+        <footer>
+            <div class="wrapper"></div>
+        </footer>
+    </div>
+</body>
+</html>
