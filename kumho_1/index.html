@@ -12,6 +12,8 @@
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
     <title>금호건설</title>
 </head>
 <body>
@@ -139,11 +141,11 @@
             <section class="biz">
                 <div class="tit">
                     <div class="wrapper">
-                        <h2><span>사업분야</span></h2>
-                        <p>WILL CHALLENGE<br>THE WORLD'S BEST</p>
+                        <h2 data-aos="fade-up"><span>사업분야</span></h2>
+                        <p data-aos="fade-up">WILL CHALLENGE<br>THE WORLD'S BEST</p>
                     </div>
                 </div>
-                <div class="list">
+                <div class="list" data-aos="fade-up">
                     <ul>
                         <!-- jquery에서 
                          마우스를 오버한 li에는 on추가 
@@ -321,5 +323,12 @@
             </div>
         </footer>
     </div>
+    <script>
+        AOS.init({
+        offset: 300, // 해당 콘텐츠가 하단에서 몇 px 위로 올라와에 나타나는 효과가 나타날지 셋팅하는 값
+        duration: 500, // 애니메이션 효과가 작동되는 시간
+        easing: 'ease', // 가속도
+        });
+        </script>
 </body>
 </html>
