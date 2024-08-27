@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/fullpage.min.js"></script><!-- fullpage js-->
-    <link rel="stylesheet" href="css/fullpage.css"><!-- fullpage css-->
-    <script src="js/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/fullpage.min.js"></script><!--fullpage js-->
+    <link rel="stylesheet" href="css/fullpage.css"><!--fullpage css-->
+    <script src="js/swiper-bundle.min.js"></script><!--swiper-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"><!--swiper-->
+    <script src="js/counter.js"></script><!--숫자를 증가시키는 함수-->
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <title>생명의숲</title>
@@ -16,10 +18,10 @@
     <div class="skip_nav">
         <a href="#skip_contents">본문 바로가기</a>
         <a href="#skip_menu">대메뉴 바로가기</a>
-    </div>  
-    <!-- header는 기본 흰색, dark 클래스가 추가되면 검은색변경-->
+    </div>
+    <!-- header는 기본 흰색, dark 클래스가 추가되면 검은색변경 -->
     <header>
-        <h2 class="logo"><a href="index.html">생명의숲</a></h2>
+        <h1 class="logo"><a href="index.html">생명의숲</a></h1>
         <nav class="gnb">
             <button class="gnb_open">메뉴열기</button>
             <div class="gnb_wrap">
@@ -31,7 +33,7 @@
                     <li><a href="#n"><span>나의후원</span></a></li>
                 </ul>
             </div>
-            <button class="close">메뉴닫기</button>
+            <button class="gnb_close">메뉴닫기</button>
         </nav>
         <div class="tnb">
             <a href="#n" class="global">EN</a>
@@ -41,10 +43,10 @@
     <aside class="fp_nav">
         <ul>
             <!-- 현재 선택된 section은 li에 active 클래스 -->
-            <li class="active"><a href="#visual">Main</a></li>
-            <li><a href="#tree">나무심기</a></li>
-            <li><a href="#forest">숲 활동</a></li>
-            <li><a href="#story">활동이야기</a></li>
+            <li class="active"><a href="#visual"><span>Main</span></a></li>
+            <li><a href="#tree"><span>나무심기</span></a></li>
+            <li><a href="#forest"><span>숲 활동</span></a></li>
+            <li><a href="#story"><span>활동이야기</span></a></li>
         </ul>
     </aside>
     <aside class="quick_menu">
@@ -57,48 +59,127 @@
         </ul>
     </aside>
     <div id="fullpage">
-        <section class="section section visual">
+        <section class="section fp-auto-height-responsive visual">
             <h2>팝업</h2>
-            <div class="swiper"> 
-                <ul class="swiper-wrapper"> 
+            <div class="swiper">
+                <ul class="swiper-wrapper">
                     <li class="swiper-slide popup1">
                         <div class="inner">
                             <h3>특별한 날을 기념하는<br>새로운 방법</h3>
-                            <p>기념하고 싶은 날! 서울 곳곳에<br>나무 한 그루 심어보는 건 어떠세요?</p>
+                            <p>기념하고 싶은 날! 서울 곳곳에<br> 나무 한 그루 심어보는 건 어떠세요?</p>
                         </div>
-                    </li> 
+                    </li>
                     <li class="swiper-slide popup2">
                         <div class="inner">
-                            <h3>누구나 일상에서<br>건강한 숲을 누리도록</h3>
-                            <p>도시 속 나무심기를 위한<br>#같이가치 #매달기부</p>
+                            <h3>누구나 일상에서 <br>건강한 숲을 누리도록</h3>
+                            <p>도시 속 나무심기를 위한<br> #같이가치 #매달기부</p>
                         </div>
-                    </li> 
+                    </li>
                     <li class="swiper-slide popup3">
                         <div class="inner">
-                            <h3>우리가 지켜야 할<br>고목나무 이야기</h3>
-                            <p>생명의숲과<br>나무 할아버지 박상진교수</p>
+                            <h3>우리가 지켜야 할<br> 고목나무 이야기</h3>
+                            <p>생명의숲과<br> 나무 할아버지 박상진교수</p>
                         </div>
-                    </li> 
+                    </li>
                     <li class="swiper-slide popup4">
                         <div class="inner">
-                            <h3>숲을 움직이는 시민의 힘<br>자원활동으로 실현됩니다</h3>
+                            <h3>숲을 움직이는 시민의 힘<br> 자원활동으로 실현됩니다</h3>
                             <p>생명의숲 시민 활동 플랫폼 '숲친'<br>지금 함께해요!</p>
                         </div>
-                    </li> 
+                    </li>
                 </ul>
-                <div class="paging"></div>
+                <div class="paing"></div>
             </div>
         </section><!--visual-->
-        <section class="section section tree">
-            tree
+        <section class="section fp-auto-height-responsive tree">
+            <div class="wrapper">
+                <div class="count"><span data-start="0" data-end="89272">89,272</span></div>
+                <h2>2023년 심은 나무</h2>
+                <p>생명의 숲은 기후위기시대 나무를 잘 심고, 잘 가꾸며<br>
+                    건강한 숲, 지속가능한 사회를 만들어 갑니다.</p>
+            </div>
         </section><!--tree-->
-        <section class="section section forest">
-            forest
+        <section class="section fp-auto-height-responsive forest">
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>Forest for LIfe<br>
+                        생명의숲</h2>
+                    <p>생명의숲은 시민의 힘으로 나무를 심고 숲을 가꾸고 보전하며,<br> 숲의 공공성을 높여 누구나 숲의 가치를 누리는<br> 건강한 사회를 만들어가는 시민단체입니다.</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li class="forest01"><a href="#n"><span>도시숲</span></a></li>
+                        <li class="forest02"><a href="#n"><span>학교숲</span></a></li>
+                        <li class="forest03"><a href="#n"><span>사회복지숲</span></a></li>
+                        <li class="forest04"><a href="#n"><span>숲환경교육</span></a></li>
+                        <li class="forest05"><a href="#n"><span>숲길</span></a></li>
+                        <li class="forest06"><a href="#n"><span>공존숲</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </section><!--forest-->
-        <section class="section section story">
-            story
+        <section class="section fp-auto-height-responsive story">
+            <div class="wrapper">
+                <div class="tit">
+                    <h2>생명의숲 이야기</h2>
+                    <p>도시숲, 학교숲, 숲환경교육, 사회복지숲 등의 시민과 함께한 다양한 활동 이야기입니다.</p>
+                </div>
+                <div class="list">
+                    <div class="swiper">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>우리의 숲, 함께 가꾸는 이야기 - Chapter1. FOREST CREW 캠페인의 시작</h3>
+                                    <p>생명의숲은 지난 봄부터 "Make Us Green in Forest - FOREST CREW" 캠페인을 전국에서 실행하고 있습니다. 이 캠페인은 카카오메이커스의 후원을 통해 강원영동, 경북, 부산, 대전충남, 울산에서 활발히 진행되고 있습니다. 이 글을 통해 캠페인의 시작과 그동안의 성과, 그리고 앞으로의 계획을 나누고자 합니다. FOREST CREW는 이 캠페인에 참여한 그리고 참여할 모든 분들을 뜻합니다. </p>
+                                    <span class="date">2024.07.30</span>
+                                    <div class="photo">
+                                        <span class="cate">캠페인 이야기</span>
+                                        <img src="images/main/story01.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>이사기록 : 쨍하고 해 뜬 날 이사했어요!</h3>
+                                    <p>잦은 비와 폭염으로 습한 날씨가 이어지고 있는데요, 여러분은 어떻게 지내시나요? 생명의숲이 드.디.어. 사무처 이전을 마쳤다는 소식을 여러분에게 전합니다. 정말 많은 분들의 응원 덕분에 안전하게 이사를 마칠 수 있었는데요. 준비 과정부터 지금까지의 시간을 만나보세요.</p>
+                                    <span class="date">2024.07.23</span>
+                                    <div class="photo">
+                                        <span class="cate">사무처 이야기</span>
+                                        <img src="images/main/story02.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>[산불대응] 다시 숲에 싹을 틔운 2년의 시간, 함께 만나보세요!</h3>
+                                    <p># 2022년 3월 13일, 213시간만에 꺼진 산불 2022년 3월 4일, 경북 울진군 야산에서 시작된 산불은 213시간만인 3월 13일, 천금같은 단비로 완전히 진화되었습니다. 우리는 이 산불에 ‘2022년 동해안 산불’, ‘2022년 강원경북 대형산불’이라는 이름을 붙이게 되었습니다. 이 산불은 2000년 동해안에서 발생했던 산불 이후 국내 최대 규모로 기록되고 있습니다.</p>
+                                    <span class="date">2024.04.18 </span>
+                                    <div class="photo">
+                                        <span class="cate">캠페인 이야기</span>
+                                        <img src="images/main/story03.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="swiper-slide">
+                                <a href="#n">
+                                    <h3>서울마이트리, 시민과 함께 만드는 도시정원</h3>
+                                    <p>메마른 겨울이 지나고 초록 싹이 슬슬 보이는 4월. 흩날리는 벚꽃잎 속에서 어김없이 올해 식목일에도 생명의 숲은 시민분들과 함께 나무를 심었습니다. 이번 나무심기는 신입 활동가로 설레고도 긴장되는 첫 행사였습니다. 혹시나 잘못 안내하면 어떡하나 이런저런 생각이 많았는데, 걱정이 무색하게 다들 열심히 안내를 듣고 꼼꼼히 심는 모습에 고민은 싹 사라졌습니다. 긴장 할 때만 해도 날이 살짝 흐렸는데, 어느새 기분도 밝아지고 햇살도 듬뿍 들어와있었습니다.</p>
+                                    <span class="date">2024.04.11</span>
+                                    <div class="photo">
+                                        <span class="cate">도시숲</span>
+                                        <img src="images/main/story04.png" alt="">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="more">
+                    <a href="#n">전체보기</a>
+                </div>
+            </div>
         </section><!--story-->
-        <footer class="section section fp-auto-height">
+        <footer class="section fp-auto-height-responsive fp-auto-height">
             footer
         </footer>
     </div>
