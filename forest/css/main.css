@@ -565,7 +565,13 @@
     color: var(--tit-txt-color);
 }
 .story .tit p {
-    margin: 7px 0 64px 0;
+    margin: 7px 0 44px 0;
+}
+.story .list ul {
+    margin-top: 20px;
+}
+.story .list ul li {
+    width: 297px;
 }
 .story .list ul li a {
     display: block;
@@ -611,6 +617,8 @@
 .story .list ul li a .photo {
     overflow: hidden;
     position: relative; /* cate 정렬의 기준 */
+    font-size: 0;
+    line-height: 0;
 }
 .story .list ul li a .photo img {
     width: 100%;
@@ -623,12 +631,128 @@
     top: 0;
     background-color: var(--color-main2);
     color: #fff;
+    font-size: 17px;
+    line-height: 1.4;
     font-weight: 800;
     padding: 5px 11px;
     content: "";
 }
-footer {
-    background-color: #1d1d1d;
+/* 마우스 오버했을때 */
+.story .list ul li:hover::after {
+    position: absolute;
+    right: 5%;
+    bottom: 37px;s
+    width: 51px;
+    height: 51px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='71' height='71' viewBox='0 0 71 71' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.9805 26.2171L44.0521 47.1257C44.2782 47.5174 44.3353 47.9216 44.2234 48.3384C44.1119 48.7552 43.8604 49.0767 43.4687 49.3028C43.077 49.529 42.6728 49.5861 42.2561 49.4742C41.8392 49.3627 41.5177 49.1112 41.2916 48.7195L29.22 27.8109L26.6593 37.3676C26.5433 37.7994 26.301 38.1194 25.9322 38.3279C25.5632 38.536 25.159 38.5892 24.7196 38.4875C24.2695 38.3666 23.9328 38.1239 23.7096 37.7591C23.4861 37.3941 23.4348 36.9864 23.5555 36.536L27.039 23.535C27.1119 23.2631 27.2235 23.0368 27.3739 22.8559C27.524 22.6747 27.71 22.5201 27.9318 22.3921C28.1535 22.264 28.3804 22.1803 28.6124 22.1408C28.8442 22.1011 29.0961 22.1176 29.368 22.1904L42.3689 25.674C42.8006 25.79 43.1233 26.0369 43.3371 26.4149C43.5507 26.7934 43.5973 27.2077 43.4769 27.658C43.3452 28.0894 43.1016 28.414 42.7461 28.632C42.3906 28.8499 41.9876 28.8985 41.5372 28.7779L31.9805 26.2171Z' fill='white'/%3E%3C/svg%3E ");                                                                                                                
+    content: "";
+}
+.story .list ul li:hover a {
+    transform: translate(0, -20px);
+}
+.story .list ul li:hover a::after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-main2);
+        content: "";
+}
+.story .list ul li:hover a h3 {
+    position: relative;
+    z-index: 10;
     color: #fff;
-    height: 300px;
+    padding: 0 7%;
+}
+.story .list ul li:hover a p {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    padding: 0 7%;
+}
+
+.story .more {
+    text-align: center; /* a를 가운데 정렬 */
+    margin-top: 48px;
+}
+.story .more a {
+    display: inline-block;
+    padding: 9px 61px 7px 36px;
+    border: 1px solid var(--color-main2);
+    border-radius: 22px; 
+    color: var(--color-main2);
+    position: relative;
+    transition: 0.5s;
+}
+.story .more a::after {
+    position: absolute;
+    right: 31px;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='%2332C7A1'/%3E%3C/svg%3E%0A");
+    content: "";
+    transition: 0.5s;
+}
+.story .more a:hover {
+    background-color: var(--color-main2);
+    color: #fff;
+}
+.story .more a:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.25 12.75H6.25C6.0375 12.75 5.85942 12.6781 5.71575 12.5342C5.57192 12.3904 5.5 12.2122 5.5 11.9997C5.5 11.7871 5.57192 11.609 5.71575 11.4655C5.85942 11.3218 6.0375 11.25 6.25 11.25H11.25V6.25C11.25 6.0375 11.3219 5.85942 11.4658 5.71575C11.6096 5.57192 11.7878 5.5 12.0003 5.5C12.2129 5.5 12.391 5.57192 12.5345 5.71575C12.6782 5.85942 12.75 6.0375 12.75 6.25V11.25H17.75C17.9625 11.25 18.1406 11.3219 18.2843 11.4658C18.4281 11.6096 18.5 11.7878 18.5 12.0003C18.5 12.2129 18.4281 12.391 18.2843 12.5345C18.1406 12.6782 17.9625 12.75 17.75 12.75H12.75V17.75C12.75 17.9625 12.6781 18.1406 12.5342 18.2843C12.3904 18.4281 12.2122 18.5 11.9997 18.5C11.7871 18.5 11.609 18.4281 11.4655 18.2843C11.3218 18.1406 11.25 17.9625 11.25 17.75V12.75Z' fill='white'/%3E%3C/svg%3E%0A");
+    /* transform: rotate(360deg); */
+    animation-name: story_more;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes story_more {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); } 
+}
+@media screen and (max-width:1024px){
+    .story .tit h2 {
+        margin-top: 85px;
+    }
+    .story .tit p {
+        margin-bottom: 18px;
+    }
+    .story .list ul li {
+        width: 250px;
+    }
+    .story .list ul li a {
+        padding-top: 16px;
+    }
+    .story .list ul li a h3 {
+        font-size: 17px;
+    }
+    .story .list ul li a p {
+        margin: 10px 0 13px 0;
+    }
+    .story .list ul li a .date {
+        margin-bottom: 14px;
+    }
+    .story .list ul li a .cate {
+        font-size: 13px;
+    }
+    .story .more {
+        margin-top: 33px;
+    }
+    .story .more a {
+        padding: 8px 45px 5px 26px;
+    }
+    .story .more a::after {
+        right: 26px;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+    }
 }
